@@ -1,0 +1,175 @@
+---
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'Services',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="Services"
+    title="Empower Your Endeavors with Innovative Solutions"
+    subtitle="At Unsuspicious Industries, we're committed to revolutionizing the way you tackle modern challenges. Explore our range of cutting-edge solutions designed to elevate your projects and drive success."
+    actions={[{ variant:"primary", target: '_blank', text: 'Start exploring', href: '/' }]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'AstroWind Hero Image',
+    }}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Innovative Solutions for Every Industry"
+    subtitle="Explore our diverse range of solutions tailored to meet the unique needs of various industries and purposes."
+    columns={3}
+    items={[
+      {
+        title: 'Efficiency Enhancement',
+        description:
+          'We streamline processes and boost efficiency by offering innovative solutions that optimize workflows and enhance productivity.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Reliability Assurance',
+        description:
+          'Our solutions are built on robust frameworks, ensuring reliability and consistency to meet the demands of your projects.',
+        icon: 'tabler:home-star',
+      },
+      {
+        title: 'Customized Solutions',
+        description: `We understand that one size doesn't fit all. That's why we provide customizable solutions tailored to your specific requirements.`,
+        icon: 'tabler:photo',
+      },
+    ]}
+  />
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'Cutting-Edge Technology',
+        description:
+          'We leverage the latest advancements in technology to develop solutions that stay ahead of the curve and address the evolving needs of your projects.',
+        icon: 'tabler:wand',
+      },
+      {
+        title: 'User-Centric Design',
+        description:
+          'Our solutions are designed with the end user in mind, ensuring intuitive interfaces and seamless user experiences.',
+        icon: 'tabler:settings',
+      },
+      {
+        title: 'Scalable Architecture',
+        description:
+          'We employ scalable architectures that grow with your business, allowing for seamless expansion and adaptation to changing requirements.',
+        icon: 'tabler:presentation',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1525909002-1b05e0c869d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: 'Features Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Approach</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isAfterContent
+    items={[
+      {
+        title: 'Continuous Innovation',
+        description:
+          'We are committed to ongoing innovation, continuously enhancing our solutions to keep pace with technological advancements and market trends.',
+        icon: 'tabler:clock',
+      },
+      {
+        title: 'Customer Satisfaction',
+        description:
+          'We prioritize customer satisfaction, striving to exceed expectations and deliver solutions that drive tangible results for your projects.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Sustainable Impact',
+        description:
+          'We believe in creating solutions that not only deliver immediate benefits but also contribute to a sustainable and prosperous future for all stakeholders.',
+        icon: 'tabler:coin',
+      },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1552664688-cf412ec27db2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Benefits Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Commitment</h3>
+    </Fragment>
+  </Content>
+
+  <!-- Testimonials Widget *********** -->
+
+  <Testimonials
+    title="Feedback from Satisfied Clients"
+    testimonials={[
+      {
+        testimonial: `Unsuspicious Industries has been instrumental in transforming our operations. Their solutions have not only improved efficiency but also opened up new opportunities for growth.`,
+        name: 'John Doe',
+        job: 'CEO, TechCorp Inc.',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'John Doe Image',
+        },
+      },
+      {
+        testimonial: `The solutions provided by Unsuspicious Industries have exceeded our expectations. They are highly reliable and have significantly improved our productivity.`,
+        name: 'Jane Smith',
+        job: 'CTO, InnovateX',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Jane Smith Image',
+        },
+      },
+      {
+        testimonial: `We're thrilled with the solutions provided by Unsuspicious Industries. They have significantly enhanced our operations and delivered measurable results.`,
+        name: 'David Johnson',
+        job: 'Founder, GrowthCo',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'David Johnson Image',
+        },
+      },
+    ]}
+    callToAction={{
+      target: '_blank',
+      text: 'More testimonials...',
+      href: 'https://github.com/onwidget/astrowind',
+      icon: 'tabler:chevron-right',
+    }}
+  />
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[{
+      variant: "primary",
+      text: 'Start exploring',
+      href: '/',
+    }]}
+    title="Experience the Unsuspicious Difference"
+    subtitle="Unlock the potential of your projects with our innovative solutions. Whether you're in business, design, or education, we're here to help you succeed."
+  />
+</Layout>

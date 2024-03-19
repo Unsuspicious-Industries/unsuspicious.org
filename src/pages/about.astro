@@ -1,0 +1,178 @@
+---
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Steps2 from '~/components/widgets/Steps2.astro';
+import Layout from '~/layouts/PageLayout.astro';
+
+const metadata = {
+  title: 'About us',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    tagline="About us"
+    title="We are a team of professionals"
+    subtitle='At Unsuspicious Industries, we are a team of professionals who are passionate about what we do. We are committed to providing the best service to our clients and partners. We are constantly improving and innovating to offer the best solutions to our clients. We are proud of our achievements and the recognition we have received as industry experts. We are committed to ethical practices and a customer-centric approach. We are a global company with a presence in four countries. We are Unsuspicious Industries.'
+
+    image={{
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+      alt: 'Colorful Image',
+    }}
+  />
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    title="Statistics about us"
+    stats={[
+      { title: 'Offices', amount: '4' },
+      { title: 'Employees', amount: '248' },
+      { title: 'Innovations', amount: '12' },
+      { title: 'Awards', amount: '24' },
+    ]}
+  />
+
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+
+    title="Fields of expertise"
+    columns={3}
+    isAfterContent={true}
+    items={[
+      {
+        title: 'Hardware Engineering',
+        description:
+          'We work with teams around the world to build the next generation of harware products, based on latest technologies combined specialized with analog computning units (ACU)',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Software Development',
+        description:
+          'At USI, We think that software must not rely on newer hardware to be efficient. We develop software that puts performance first, and we are proud of it.',
+        icon: 'tabler:template',
+      },
+      {
+        title: 'Finance',
+        description:
+          'Alongside our Software Team we integrate new AI technologies to analyse and predict market trends with a new level of accuracy.',
+        icon: 'tabler:template',
+      }
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Our values"
+    subtitle="We are committed to providing the best service to our clients and partners. We are constantly improving and innovating to offer the best solutions to our clients."
+    items={[
+      {
+        title: 'Customer-centric approach',
+        description:
+          'At Unsuspicious Industries, clients are always our top priority. Our efficient feedback system ensures that we are always in touch with our clients.',
+      },
+      {
+        title: 'Constant Improvement',
+        description:
+          'All team workers are encouraged to constantly improve and innovate. We believe that the best ideas and solutions come from a free and open environment.',
+      },
+      {
+        title: 'Ethical Practices',
+        description:
+          'As a company in the tech industry, we believe that progress must always be guided by ethics. Scientific and technological advances must not come at the expense of human rights and dignity.',
+      },
+    ]}
+  />
+
+  <!-- Steps2 Widget ****************** -->
+
+  <Steps2
+    title="Achievements"
+    subtitle="As an industry-leading firm, we received many achievements, for our work and commitement to sustainable and accessible technologies."
+    isReversed={true}
+    callToAction={{
+      text: 'See more',
+      href: '/',
+    }}
+    items={[
+      {
+        title: 'Global reach',
+        description: 'Thanks to our presence in countries around the world, we are able to offer our services to clients in all continents.',
+        icon: 'tabler:globe',
+      },
+      {
+        title: 'Positive customer feedback and reviews',
+        description:
+          'Many of our clients have left positive feedback and reviews about our services and products.',
+        icon: 'tabler:message-star',
+      },
+      {
+        title: 'Awards and recognition as industry experts',
+        description:
+          'In our work with other industry leaders and researchers, we have received awards and recongnition for our innovative aproach to technology.',
+        icon: 'tabler:award',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <!-- Features3 Widget ************** -->
+
+  <Features3
+    title="Locations"
+    subtitle="Find us in these countries"
+    columns={4}
+    items={[
+      {
+        title: 'France',
+        description: '12 rue coustou, 75018, Paris',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Belgium',
+        description: '29 rue de Neufchâtel, 1000, Brussels',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Russia',
+        description: '34 ulitsa Krasnaya, 123456, Moscow',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Bulgaria',
+        description: '56 ulitsa Vasil Levski, 1000, Sofia',
+        icon: 'tabler:map-pin',
+      },
+    ]}
+  />
+
+  <!-- Features2 Widget ************** -->
+
+  <Features2
+    title="Technical Support"
+    tagline="Contact us"
+    columns={2}
+    items={[
+      {
+        title: 'Chat with us',
+        description:
+          'Our team is available 24/7 to answer your questions and provide technical support. We are always happy to help.',
+        icon: 'tabler:messages',
+      },
+      {
+        title: 'Call us',
+        description:
+          'You can call us at any time to get in touch with our team. We are always available to help you with any questions or issues you may have.',
+        icon: 'tabler:headset',
+      },
+    ]}
+  />
+</Layout>

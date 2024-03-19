@@ -1,0 +1,151 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+
+const metadata = {
+  title: 'Unsuspicious Industries — Pioneering Tech for Tomorrow',
+  ignoreTitleTemplate: true,
+};
+
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    image={{ src: '~/assets/images/unsuspicious-hero-image.png', alt: 'Innovative Solutions' }}
+  >
+    <Fragment slot="title">
+      Empowering the Future with <span class="text-accent dark:text-white highlight">Innovative Tech</span>
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Unsuspicious Industries is a multidisciplinary tech company at the forefront of <strong>software development, hardware design, Artificial Intelligence, and trading</strong>. Join us on our mission to revolutionize the modern world.
+    </Fragment>
+  </Hero>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Our Expertise"
+    title="Why Choose Unsuspicious Industries"
+    subtitle="Integrating cutting-edge technology with real-world applications across multiple disciplines."
+    items={[
+      {
+        title: 'Software Development Mastery',
+        description: 'Engineer your vision into reality with our full-stack software development capabilities.',
+        icon: 'tabler:code',
+      },
+      {
+        title: 'Innovative Hardware Solutions',
+        description: 'From IoT devices to custom hardware, our designs bring your ideas to life.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Advanced Artificial Intelligence',
+        description: 'Harness the power of AI to drive efficiency, innovation, and smarter solutions.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Strategic Trading Algorithms',
+        description: 'Leverage algorithmic trading for better decision-making and optimized investment strategies.',
+        icon: 'tabler:chart-candle',
+      },
+      {
+        title: 'Eco-friendly Innovations',
+        description: 'Committed to sustainability, we develop solutions that benefit both technology and the planet.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Robust Security Measures',
+        description: 'Ensuring the highest level of security to protect your data and our products.',
+        icon: 'tabler:lock',
+      },
+    ]}
+  />
+
+
+  <!-- Stats Widget ****************** -->
+
+  <Stats
+    id="stats"
+    title="Our Statistics"
+    subtitle="A quick glance at our performance."
+    tagline="Performance Metrics"
+    isDark={false}
+    stats={[
+      {
+        amount: '100+',
+        title: 'Projects Completed',
+        icon: 'tabler:checkbox',
+      },
+      {
+        amount: '50+',
+        title: 'Happy Clients',
+        icon: 'tabler:mood-smile',
+      },
+      {
+        amount: '10+',
+        title: 'Awards Won',
+        icon: 'tabler:trophy',
+      },
+      {
+        amount: '5000+',
+        title: 'Cups of Coffee',
+        icon: 'tabler:coffee',
+      },
+    ]}
+  />
+
+  <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    id="faq"
+    tagline="Questions & Answers"
+    title="Frequently Asked Questions"
+    subtitle="Find answers to the most common questions about Unsuspicious Industries and our services."
+    items={[
+      {
+        title: 'What industries do you serve?',
+        description: 'We work with clients from various industries, including finance, healthcare, retail, and manufacturing. Our expertise is not limited to any specific sector, and we are always open to new challenges and opportunities.',
+      },
+      {
+        title: 'How do you ensure data security?',
+        description: 'Data security is a top priority for us. We implement robust security measures, including encryption, access controls, and regular security audits, to protect our clients\' data and ensure compliance with industry standards.',
+      },
+      {
+        title: 'What is your approach to sustainability?',
+        description: 'We are committed to sustainability and environmental responsibility. Our solutions are designed to minimize environmental impact and promote eco-friendly practices. We also work with clients to develop sustainable technology solutions that benefit both their business and the planet.',
+      },
+      {
+        title: 'Do you offer custom software development?',
+        description: 'Yes, we provide custom software development services tailored to the unique needs of our clients. Whether you need a web application, mobile app, or enterprise software solution, we have the expertise to bring your vision to life.',
+      },
+      {
+        title: 'How can I get started with Unsuspicious Industries?',
+        description: 'Getting started with us is easy. Simply contact us to discuss your project, and we will work with you to develop a customized solution that meets your needs and exceeds your expectations.',
+      },
+    ]}
+
+  />
+
+  <!-- Call to Action Widget ********* -->
+
+  <CallToAction
+    id="contact"
+    tagline="Let's Build the Future Together"
+    title="Ready to innovate?"
+    actions={[
+      { text: 'Contact Us', href: '/contact', variant: 'primary' },
+    ]}
+  />
+
+</Layout>
