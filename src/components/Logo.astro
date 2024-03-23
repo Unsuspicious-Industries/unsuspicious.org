@@ -1,7 +1,9 @@
 ---
 import { SITE } from '~/utils/config';
+
+import LogoImg from '~/assets/logo/logo.png';
 ---
 
 <span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-  <img src="/logo.png" alt="Logo" class="inline-block mr-2" style="width: 2.5em; height: 2.5em;" /> {SITE?.name}
+  <img src={LogoImg.src} alt="Logo" class="inline-block mr-2" style="width: 2.5em; height: 2.5em;" /> {SITE?.name}
 </span>
