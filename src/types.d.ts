@@ -204,6 +204,8 @@ export interface Form {
   disclaimer?: Disclaimer;
   button?: string;
   description?: string;
+  method?: string;
+  action?: string;
 }
 
 // WIDGETS
