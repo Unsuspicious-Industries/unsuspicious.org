@@ -2,17 +2,14 @@
 import type { Form } from '~/types';
 import Button from '~/components/ui/Button.astro';
 
+
 const { inputs, textarea, disclaimer, button = 'Contact us', description = '' ,method = '' ,action = '' } = Astro.props as Form;
 
-// prevent redirect on form submit
-const handleSubmit = (event: Event) => {
-  event.preventDefault();
-  console.log('Form submitted');
-};
 
 ---
 
 <form action={action} method={method}>
+
   {
     inputs &&
       inputs.map(
@@ -90,3 +87,4 @@ const handleSubmit = (event: Event) => {
     )
   }
 </form>
+
