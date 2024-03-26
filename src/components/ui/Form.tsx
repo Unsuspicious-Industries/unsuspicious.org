@@ -3,8 +3,15 @@ import type { Form } from "~/types";
 
 export default function FormContainer(FormProps: Form) {
 
+  let isAgreed = false;
 
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
+
+    if (!isAgreed) {
+      alert("You must agree to USI Privacy Policy");
+      return;
+    }
+
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
 
@@ -54,7 +61,30 @@ export default function FormContainer(FormProps: Form) {
           />
         </div>
       ))}
-      {/* Add other form components (textarea, disclaimer, button, description) here following the same pattern */}
+      {FormProps.textarea && (
+        <div className="mb-6">
+          <label htmlFor="textarea" className="block text-sm font-medium">
+            {FormProps.textarea.label}
+          </label>
+          <textarea
+            name="textarea"
+            id="textarea"
+            placeholder={FormProps.textarea.placeholder || ''}
+            className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+          />
+        </div>
+      )}
+      {FormProps.disclaimer && (
+        <div className="mb-6 text-sm">
+          <label>
+            <input
+              type="checkbox"
+              onChange={(e) => (isAgreed = e.target.checked)}
+            />
+            Agree to USI Privacy Policy
+          </label>
+        </div>
+      )}
       <button type="submit">Submit</button>
     </form>
   );
