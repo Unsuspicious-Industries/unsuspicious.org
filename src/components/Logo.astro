@@ -5,5 +5,7 @@ import LogoImg from '~/assets/logo/logo.png';
 ---
 
 <span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-  <img src={LogoImg.src} alt="Logo" class="hidden md:inline-block mr-2" style="width: 2em; height: 2em;" /> {SITE?.name}
+  <img src={LogoImg.src} alt="Logo" class="inline-block md:inline-block mr-2" style="width: 2em; height: 2em;"/>
+  <span class="inline md:hidden">{SITE?.acronym}</span>
+  <span class="hidden md:inline">{SITE?.name}</span>
 </span>

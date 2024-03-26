@@ -1,5 +1,6 @@
 site:
   name: Unsuspicious Industries
+  acronym: USI
   site: 'https://unsuspicious.org'
   base: ''
   trailingSlash: false
@@ -22,8 +23,8 @@ metadata:
         height: 628
     type: website
   twitter:
-    handle: '@unsuspicious'
-    site: '@unsuspicious'
+    handle: '@unsuspiciousind'
+    site: '@unsuspiciousind'
     cardType: summary_large_image
 
 i18n:
@@ -106,7 +107,7 @@ analytics:
         linkActive: rgb(255, 255, 255) # white active link color in dark mode
 
 ui:
-  theme: 'system' # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  theme: "dark:only"
 
   tokens:
     default:

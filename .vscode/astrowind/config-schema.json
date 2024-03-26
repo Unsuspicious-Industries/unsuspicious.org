@@ -8,6 +8,9 @@
         "name": {
           "type": "string"
         },
+        "acronym" : {
+          "type": "string"
+        },
         "site": {
           "type": "string"
         },
