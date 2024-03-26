@@ -1,19 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 import type { Form } from "~/types";
 
-export default function FormContainer(FormProps: Form) {
+import Button from "./FormButton";
 
-  let isAgreed = false;
+export default function FormContainer(FormProps: Form) {
+  const [message, setMessage] = useState<string | null>(null);
 
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
 
-    if (!isAgreed) {
-      alert("You must agree to USI Privacy Policy");
-      return;
+    setMessage(null); // Clear the message at the start of submission
+
+    const formData = new FormData(e.currentTarget);
+
+    for (let [key, value] of formData.entries()) {
+      if (value === "") {
+        const input = document.querySelector(`[name="${key}"]`);
+        console.log(input)
+        if (input) {
+          input.classList.add("ring", "ring-red-500");
+          input.addEventListener("input", () => {
+            input.classList.remove("ring", "ring-red-500");
+          }); 
+        }
+        return;
+      }
     }
 
-    e.preventDefault();
-    const formData = new FormData(e.currentTarget);
+    // if the disclaimer is present and the user has not agreed to it, prevent the form from submitting
+    if (FormProps.disclaimer) {
+      const checkbox = document.getElementById("disclaimer-box") as HTMLInputElement;
+      if (checkbox && !checkbox.checked) {
+        alert("You must agree to USI Privacy Policy to continue.");
+        return;
+      }
+    }
 
     // Convert FormData to JSON
     let object: any = {};
@@ -32,18 +53,23 @@ export default function FormContainer(FormProps: Form) {
     
     const data = await response.json();
 
+    
+
     // if response.success is true then do something
     if (data.success) {
-      // add an alert with the success message
-      alert("Success!");
+      setMessage("Done!");
     } else {
-      // add an alert with the error message
-      alert(data.error);
+      setMessage(data.error);
     }
   }
 
   return (
     <form onSubmit={submit}>
+      {message && (
+        <div className="flex justify-center items-center border-b border-t border-gray-700 font-sans py-2 my-4">
+          <h2>{message}</h2>
+        </div>
+      )}
       {FormProps.inputs?.map((input) => (
         <div key={input.name} className="mb-6">
           {input.label && (
@@ -57,7 +83,7 @@ export default function FormContainer(FormProps: Form) {
             id={input.name}
             autoComplete={input.autocomplete || 'on'}
             placeholder={input.placeholder || ''}
-            className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            className="py-3 px-4 block w-full text-md rounded-lg border dark:border-gray-700 bg-white dark:bg-zinc-900"
           />
         </div>
       ))}
@@ -70,7 +96,7 @@ export default function FormContainer(FormProps: Form) {
             name="textarea"
             id="textarea"
             placeholder={FormProps.textarea.placeholder || ''}
-            className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900"
+            className="py-3 px-4 block w-full text-md rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-zinc-900"
           />
         </div>
       )}
@@ -78,14 +104,20 @@ export default function FormContainer(FormProps: Form) {
         <div className="mb-6 text-sm">
           <label>
             <input
+              id="disclaimer-box"
               type="checkbox"
-              onChange={(e) => (isAgreed = e.target.checked)}
             />
             Agree to USI Privacy Policy
           </label>
         </div>
       )}
-      <button type="submit">Submit</button>
+      {FormProps.button && (
+        <div className="mt-10 grid">
+          <Button variant="primary" type="submit">
+            {FormProps.button}
+          </Button>
+        </div>
+      )}
     </form>
   );
 }

@@ -27,6 +27,7 @@
     "lodash.merge": "^4.6.2",
     "preact": "^10.19.6",
     "react": "^18.2.0",
+    "twin.macro": "^3.4.1",
     "typescript-esbuild": "^0.3.10",
     "unpic": "^3.17.0"
   },
@@ -42,6 +43,7 @@
     "@typescript-eslint/eslint-plugin": "^7.1.0",
     "@typescript-eslint/parser": "^7.1.0",
     "astro-compress": "2.2.11",
+    "babel-plugin-macros": "^3.1.0",
     "eslint": "^8.57.0",
     "eslint-plugin-astro": "^0.31.4",
     "eslint-plugin-jsx-a11y": "^6.8.0",
