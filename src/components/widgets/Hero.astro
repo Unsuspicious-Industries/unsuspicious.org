@@ -11,6 +11,7 @@ export interface Props {
   content?: string;
   actions?: string | CallToAction[];
   image?: string | any; // TODO: find HTMLElementProps
+  imageClass?: string; // New property for image classes
 }
 
 const {
@@ -21,6 +22,7 @@ const {
   content = await Astro.slots.render('content'),
   actions = await Astro.slots.render('actions'),
   image = await Astro.slots.render('image'),
+  imageClass, // Destructure the new property
 } = Astro.props;
 ---
 
@@ -74,7 +76,7 @@ const {
                 <Fragment set:html={image} />
               ) : (
                 <Image
-                  class="mx-auto rounded-md w-full"
+                  class={`mx-auto rounded-md w-full ${imageClass}`} // Use the new property here
                   widths={[400, 768, 1024, 2040]}
                   sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
                   loading="eager"

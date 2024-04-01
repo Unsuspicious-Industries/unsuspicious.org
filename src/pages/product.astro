@@ -1,30 +1,76 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
 
-import Hero from '../components/widgets/Hero.astro';
+import CodeHero from '~/assets/images/code2.jpg';
 
 const metadata = {
-  title: 'Unsuspicious Industries Product Page',
+title: 'Unsuspicious Industries Product Page',
 };
 ---
-
 <Layout metadata={metadata}>
-  <!-- Hero2 Widget ******************* -->
+<Hero
+tagline="Unsuspicious Industries"
+title="Crafted with Care and Precision!"
+subtitle="Discover the unique features and benefits of our products. Experience the difference with Unsuspicious Industries."
+image={{
+src: CodeHero,
+alt: 'A spotlight on a product from Unsuspicious Industries.',
+}}
+imageClass='blur-sm'
+/>
+<Hero2
+tagline="Financial Analysis API"
+title="Unlock the Power of Real-Time Stock Price Predictions"
+subtitle="Our cutting-edge Financial Analysis API provides real-time analysis of stock price predictions. Leverage the power of our advanced algorithms to make informed investment decisions and stay ahead of the market."
+actions={[
+{ variant: 'primary', text: 'Learn More', href: '#' },
+{ text: 'Request Demo', href: '#' },
+ ]}
+image={{
+src: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+alt: 'Financial Analysis API',
+}}
+/>
 
-  <Hero
-    tagline="Unsuspicious Industries"
-    title="Crafted with Care and Precision!"
-    subtitle="Discover the unique features and benefits of our products. Experience the difference with Unsuspicious Industries."
-    actions={[
-      { variant: 'primary', text: 'Explore Products', href: '#', icon: 'tabler:square-rounded-arrow-right' },
-      { text: 'Learn more about us', href: '#' },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1473188588951-666fce8e7c68?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2174&q=80',
-      alt: 'A spotlight on a product from Unsuspicious Industries.',
-    }}
-  />
+<Hero2
+tagline="Analog Neuromorphic Processors"
+title="Revolutionize AI Computing with Neuromorphic Technology"
+subtitle="Our Hardware Design Department specializes in creating state-of-the-art analog neuromorphic processors for AI applications. These processors are designed to mimic the functionality of biological neural networks, enabling efficient and powerful AI computations."
+actions={[
+{ variant: 'primary', text: 'Explore Processors', href: '#' },
+{ text: 'Contact Sales', href: '#' },
+ ]}
+image={{
+src: 'https://images.unsplash.com/photo-1555664424-778a1e5e1b48?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
+alt: 'Analog Neuromorphic Processors',
+}}
+/>
 
-  <!-- add a form with email input for the newsletter -->
-  
+<Hero2
+tagline="Custom AI Models"
+title="Unleash the Potential of AI with Tailored Solutions"
+subtitle="Our AI Lab offers custom AI model training services tailored to your specific needs. Whether you require computer vision, natural language processing, or any other AI application, our team of experts will work closely with you to develop and deploy high-performance AI models."
+actions={[
+{ variant: 'primary', text: 'Get Started', href: '#' },
+{ text: 'Learn More', href: '#' },
+ ]}
+image={{
+src: 'https://images.unsplash.com/photo-1484417894907-623942c8ee29?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80',
+alt: 'Custom AI Models',
+}}
+/>
+<CallToAction
+actions={[
+{
+variant: "primary",
+text: 'Subscribe',
+href: '#',
+},
+ ]}
+title="Subscribe to Our Newsletter"
+subtitle="Stay up to date with the latest news, product updates, and exclusive offers from Unsuspicious Industries."
+/>
 </Layout>
