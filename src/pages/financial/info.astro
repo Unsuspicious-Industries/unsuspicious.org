@@ -1,0 +1,71 @@
+---
+import Headline from '~/components/blog/Headline.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink } from '~/utils/permalinks';
+
+const metadata = {
+  title: 'Services',
+};
+---
+<Layout metadata={metadata}>
+
+<Hero2
+  tagline="Unsuspicious API"
+  title="Financial Analysis"
+  subtitle="Use our API to access real-time financial data, generate accurate predictions, and make data-driven decisions. Our team of experts is here to help you succeed."
+  image={{
+    src: 'https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Financial Analysis API',
+  }}
+/>
+<!-- Content Widget **************** -->
+<Content
+  isReversed
+  items={[
+    {
+      title: 'Real-Time data Collection',
+      description: 'We collect and analyze real-time data from a variety of sources to provide accurate and up-to-date insights and analyze their correlation with financial trends.',
+      icon: 'tabler:news',
+    },
+    {
+      title: 'AI-Driven Predictions',
+      description: 'Our AI algorithms leverage machine learning and predictive analytics to generate accurate forecasts and insights, enabling you to make data-driven decisions.',
+      icon: 'tabler:brain',
+    },
+    {
+      title: 'Customizable Solutions',
+      description: 'Our API is highly customizable, allowing you to tailor the predictions and insights to your specific needs and integrate them seamlessly into your existing systems.',
+      icon: 'tabler:table-options',
+    },
+  ]}
+  image={{
+  src: 'https://images.unsplash.com/photo-1536412597336-ade7b523ecfc?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+  alt: 'Features Image',
+ }}
+>
+</Content>
+
+
+
+<!-- CallToAction Widget *********** -->
+<CallToAction
+actions={[{
+  variant: "primary",
+  text: 'Try it Out',
+  href: getPermalink('/financial/demo'),
+},{
+  variant: "secondary",
+  text: 'Contact Us',
+  href: getPermalink('/contact'),
+}]}
+title="Experience the Unsuspicious Difference"
+subtitle="Unlock the potential of your projects with our innovative solutions. Whether you're in logistics, healthcare, retail, or beyond, we're here to help you succeed."
+/>
+</Layout>
+

@@ -27,6 +27,8 @@
     "lodash.merge": "^4.6.2",
     "preact": "^10.19.6",
     "react": "^18.2.0",
+    "react-datepicker": "^6.6.0",
+    "react-syntax-highlighter": "^15.5.0",
     "twin.macro": "^3.4.1",
     "typescript-esbuild": "^0.3.10",
     "unpic": "^3.17.0"
