@@ -46,13 +46,18 @@ export default function ApiDemo({ apiUrl,method }: ApiDemoProps) {
         'Content-Type': 'application/json'
       },
     });
+
+    console.log(`Response: ${response}`)
+
     const data = await response.json();
 
     // if response.success is true then do something
-    if (data.success) {
+    if (data) {
+      console.log(`Got ${data}`);
       setMessage("Done!");
       setResponse(data);
     } else {
+      console.log(`Error : ${data.error}`);
       setMessage(data.error);
     }
   }
