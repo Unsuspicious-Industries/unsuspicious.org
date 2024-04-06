@@ -22,10 +22,6 @@ export const headerData = {
     {
       text: 'blog',
       href: getBlogPermalink(),
-    },
-    {
-      text: 'privacy',
-      href: getPermalink('/privacy'),
     }
   ],
 };
