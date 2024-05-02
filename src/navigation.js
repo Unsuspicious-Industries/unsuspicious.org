@@ -24,6 +24,7 @@ export const headerData = {
       href: getBlogPermalink(),
     }
   ],
+  
 };
 
 export const footerData = {

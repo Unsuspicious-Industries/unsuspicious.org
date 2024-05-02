@@ -107,7 +107,7 @@ analytics:
         linkActive: rgb(255, 255, 255) # white active link color in dark mode
 
 ui:
-  theme: "dark:only"
+  theme: "dark light" # Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
   tokens:
     default:

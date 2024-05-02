@@ -2,6 +2,7 @@
 import { Icon } from "astro-icon/components";
 import Logo from "~/components/Logo.astro";
 import ToggleMenu from "~/components/common/ToggleMenu.astro";
+import ToggleTheme from "~/components/common/ToggleTheme.astro";
 import Button from "~/components/ui/Button.astro"
 
 import { getHomePermalink } from "~/utils/permalinks";
@@ -29,7 +30,6 @@ export interface Props {
   isDark?: boolean;
   isFullWidth?: boolean;
   showToggleTheme?: boolean;
-  showRssFeed?: boolean;
   position?: string;
 }
 
@@ -41,11 +41,16 @@ const {
   isDark = false,
   isFullWidth = false,
   showToggleTheme = false,
-  showRssFeed = false,
   position = "center",
 } = Astro.props;
 
 const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
+
+var ThemeIcon : string;
+
+
+console.log(showToggleTheme)
+
 ---
 
 <header
@@ -84,7 +89,6 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
           links.map(({ text, href, links }) => (
             <li class={links?.length ? "dropdown" : ""}>
               {links?.length ? (
-                <>
                   <button class="hover:text-link dark:hover:text-white px-4 py-3 flex items-center">
                     {text} <Icon name="tabler:chevron-down" class="w-3.5 h-3.5 ml-0.5 rtl:ml-0 rtl:mr-0.5 hidden md:inline" />
                   </button>
@@ -103,7 +107,6 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
                       </li>
                     ))}
                   </ul>
-                </>
               ) : (
                 <a
                   class:list={[
@@ -123,10 +126,13 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
     <div
       class:list={[
         { "ml-auto rtl:ml-0 rtl:mr-auto": position === "left" },
-        "hidden md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0",
+        "md:self-center md:flex items-center md:mb-0 fixed w-full md:w-auto md:static justify-end left-0 rtl:left-auto rtl:right-0 bottom-0 p-3 md:p-0",
       ]}
     >
       <div class="items-center flex justify-between w-full md:w-auto">
+        <div class="flex">
+          {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" iconName={"tabler:sun"} />}
+        </div>
         {
           actions?.length ? (
             <span class="ml-4 rtl:ml-0 rtl:mr-4">

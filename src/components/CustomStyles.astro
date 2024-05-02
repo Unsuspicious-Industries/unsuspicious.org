@@ -3,22 +3,39 @@ import '@fontsource/roboto';
 import '@fontsource/ibm-plex-sans';
 ---
 
+
 <style is:inline is:global>
   :root {
+    --aw-font-sans: 'Roboto', sans-serif;
+    --aw-font-serif: 'IBM Plex Sans', serif;
+    --aw-font-heading: var(--aw-font-serif);
+    --aw-color-primary: rgb(0, 123, 255);
+    --aw-color-secondary: rgb(108, 117, 125);
+    --aw-color-accent: rgb(40, 167, 69);
+
+    --aw-color-text-heading: rgb(52, 58, 64); 
+    --aw-color-text-default: rgb(33, 37, 41);
+    --aw-color-text-muted: rgb(108, 117, 125);
+    --aw-color-bg-page: rgb(255, 255, 255);
+    --aw-color-border: rgb(233, 236, 239);
+
+    ::selection {background-color: rgb(0, 123, 255); color: rgb(255, 255, 255);}
+  }
+
+  .dark {
     --aw-font-sans: 'Roboto', sans-serif;
     --aw-font-serif: 'IBM Plex Sans', serif;
     --aw-font-heading: var(--aw-font-serif);
 
     --aw-color-primary: rgb(0, 123, 255);
     --aw-color-secondary: rgb(108, 117, 125);
-    --aw-color-accent: rgb(40, 167, 69);
+    --aw-color-accent: rgb(90, 75, 138);
 
     --aw-color-text-heading: rgb(255, 255, 255); 
     --aw-color-text-default: rgb(233, 236, 239);
-    --aw-color-text-muted: rgb(133, 136, 140);
+    --aw-color-text-muted: rgb(199, 204, 211);
     --aw-color-bg-page: rgb(0, 0, 0);
     --aw-color-dark-border: rgb(33, 37, 41);
-
     ::selection {background-color: rgb(9, 31, 54); color: rgb(255, 255, 255);}
   }
 </style>

@@ -14,13 +14,16 @@ const metadata = {
   ignoreTitleTemplate: true,
 };
 
+
+
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
 
   <Hero
-    image={{ src: '~/assets/images/hero-image.png', alt: 'Innovative Solutions' }}
+    image={{ src: '~/assets/images/chip3.png', alt: 'Innovative Solutions' }}
+    imageClass='height-150 sm:height-80 md:height-96 lg:height-96 xl:height-96'
   >
     <Fragment slot="title">
       Empowering the Future with <span class="text-accent dark:text-white highlight">Innovative Tech</span>
@@ -80,7 +83,6 @@ const metadata = {
     title="Our Statistics"
     subtitle="A quick glance at our performance."
     tagline="Performance Metrics"
-    isDark={false}
     stats={[
       {
         amount: '100+',
