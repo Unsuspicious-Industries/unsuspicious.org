@@ -7,7 +7,7 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About Us',
 };
 ---
 
@@ -15,54 +15,51 @@ const metadata = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    tagline="About us"
-    title="We are a team of professionals"
-    subtitle='At Unsuspicious Industries, we are a team of professionals who are passionate about what we do. We are committed to providing the best service to our clients and partners. We are constantly improving and innovating to offer the best solutions to our clients. We are proud of our achievements and the recognition we have received as industry experts. We are committed to ethical practices and a customer-centric approach. We are a global company with a presence in four countries. We are Unsuspicious Industries.'
-
+    tagline="About Us"
+    title="We are a team dedicated to social justice"
+    subtitle='At [Your Organization Name], we are a passionate team committed to promoting social justice, supporting marginalized communities, and fostering artistic expression. We strive to create a more equitable and inclusive society through our various initiatives and programs. Our dedication to ethical practices and community engagement drives us to continuously innovate and improve our efforts. We are proud of our achievements and the positive impact we have made in the lives of many. Join us in our mission to make a difference.'
     image={{
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      alt: 'Community Gathering',
     }}
   />
 
   <!-- Stats Widget ****************** -->
 
   <Stats
-    title="Statistics about us"
+    title="Our Impact"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Innovations', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Ideas', amount: '50+' },
+      { title: 'Research Projects', amount: '10+' },
+      { title: 'Art Projects', amount: '5+' },
+      { title: 'Advocacy Campaigns', amount: '20+' },
     ]}
   />
-
 
   <!-- Features3 Widget ************** -->
 
   <Features3
-
-    title="Fields of expertise"
+    title="Our Initiatives"
     columns={3}
     isAfterContent={true}
     items={[
-      {
-        title: 'Hardware Engineering',
+        {
+        title: 'Tech Outreach',
         description:
-          'We work with teams around the world to build the next generation of harware products, based on latest technologies combined specialized with analog computning units (ACU)',
-        icon: 'tabler:template',
+          'We engage with tech communities to provide support, resources, and advocacy for technological advancements. Our outreach programs aim to empower developers and promote innovation.',
+        icon: 'tabler:device-laptop',
       },
       {
-        title: 'Software Development',
+        title: 'Artistic Expression',
         description:
-          'At USI, We think that software must not rely on newer hardware to be efficient. We develop software that puts performance first, and we are proud of it.',
-        icon: 'tabler:template',
+          'We believe in the power of art to inspire change. Our art programs provide a platform for marginalized voices to express themselves and raise awareness about social justice issues.',
+        icon: 'tabler:palette',
       },
       {
-        title: 'Finance',
+        title: 'Educational Workshops',
         description:
-          'Alongside our Software Team we integrate new AI technologies to analyse and predict market trends with a new level of accuracy.',
-        icon: 'tabler:template',
+          'Our educational workshops focus on raising awareness about social justice, providing tools for advocacy, and fostering a deeper understanding of systemic issues.',
+        icon: 'tabler:book',
       }
     ]}
   />
@@ -70,23 +67,23 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Our values"
-    subtitle="We are committed to providing the best service to our clients and partners. We are constantly improving and innovating to offer the best solutions to our clients."
+    title="Our Values"
+    subtitle="We are committed to promoting social justice and supporting artistic expression."
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Inclusivity',
         description:
-          'At Unsuspicious Industries, clients are always our top priority. Our efficient feedback system ensures that we are always in touch with our clients.',
+          'We strive to create an inclusive environment where everyone feels valued and respected. Our programs are designed to be accessible to all.',
       },
       {
-        title: 'Constant Improvement',
+        title: 'Empowerment',
         description:
-          'All team workers are encouraged to constantly improve and innovate. We believe that the best ideas and solutions come from a free and open environment.',
+          'We believe in empowering individuals and communities to take action and create positive change. Our initiatives provide the tools and support needed to make a difference.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'Creativity',
         description:
-          'As a company in the tech industry, we believe that progress must always be guided by ethics. Scientific and technological advances must not come at the expense of human rights and dignity.',
+          'We encourage creativity and artistic expression as a means to inspire change and raise awareness about social justice issues.',
       },
     ]}
   />
@@ -94,61 +91,59 @@ const metadata = {
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Achievements"
-    subtitle="As an industry-leading firm, we received many achievements, for our work and commitement to sustainable and accessible technologies."
+    title="Our Achievements"
+    subtitle="We are proud of the impact we have made through our dedication to social justice and artistic expression."
     isReversed={true}
     callToAction={{
-      text: 'See more',
-      href: '/',
+      text: 'Learn More',
+      href: '/achievements',
     }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Thanks to our presence in countries around the world, we are able to offer our services to clients in all continents.',
-        icon: 'tabler:globe',
+        title: 'Tech Innovations',
+        description: 'Our projects have driven technological advancements, delivering cutting-edge solutions and fostering innovation.',
+        icon: 'tabler:device-laptop',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: 'Art Exhibitions',
         description:
-          'Many of our clients have left positive feedback and reviews about our services and products.',
-        icon: 'tabler:message-star',
+          'We have organized numerous art exhibitions that showcase the work of marginalized artists and raise awareness about social justice issues.',
+        icon: 'tabler:paint-filled',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'Advocacy Success',
         description:
-          'In our work with other industry leaders and researchers, we have received awards and recongnition for our innovative aproach to technology.',
-        icon: 'tabler:award',
+          'Our advocacy campaigns have led to significant policy changes and increased awareness about critical social justice issues.',
+        icon: 'tabler:speakerphone',
       },
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
-
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Locations"
-    subtitle="Find us in these countries"
+    title="Our Locations"
+    subtitle="Find us in these communities"
     columns={4}
     items={[
       {
-        title: 'France',
-        description: '12 rue coustou, 75018, Paris',
+        title: 'New York, USA',
+        description: '123 Main Street, New York, NY 10001',
         icon: 'tabler:map-pin',
       },
       {
-        title: 'Belgium',
-        description: '29 rue de Neufchâtel, 1000, Brussels',
+        title: 'London, UK',
+        description: '456 High Street, London, UK W1D 3QY',
         icon: 'tabler:map-pin',
       },
       {
-        title: 'Russia',
-        description: '34 ulitsa Krasnaya, 123456, Moscow',
+        title: 'Sydney, Australia',
+        description: '789 George Street, Sydney, NSW 2000',
         icon: 'tabler:map-pin',
       },
       {
-        title: 'Bulgaria',
-        description: '56 ulitsa Vasil Levski, 1000, Sofia',
+        title: 'Cape Town, South Africa',
+        description: '101 Long Street, Cape Town, 8001',
         icon: 'tabler:map-pin',
       },
     ]}
@@ -157,21 +152,21 @@ const metadata = {
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Get Involved"
+    tagline="Join Us"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Volunteer with Us',
         description:
-          'Our team is available 24/7 to answer your questions and provide technical support. We are always happy to help.',
-        icon: 'tabler:messages',
+          'Join our team of dedicated volunteers and help us make a difference. Your time and skills can have a significant impact on our initiatives.',
+        icon: 'tabler:heart-handshake',
       },
       {
-        title: 'Call us',
+        title: 'Support Our Cause',
         description:
-          'You can call us at any time to get in touch with our team. We are always available to help you with any questions or issues you may have.',
-        icon: 'tabler:headset',
+          'Your donations help us continue our work and expand our programs. Every contribution, big or small, makes a difference.',
+        icon: 'tabler:heart',
       },
     ]}
   />
