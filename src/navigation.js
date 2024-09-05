@@ -21,6 +21,10 @@ export const headerData = {
     },
     {
       text: 'research',
+      href: getPermalink('/research'),
+    },
+    {
+      text: 'blog',
       href: getBlogPermalink(),
     }
   ],
@@ -28,14 +32,6 @@ export const headerData = {
 };
 
 export const footerData = {
-  links: [
-    
-    { text: 'Blog', href: getBlogPermalink() },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
-    { text: 'Services', href: getPermalink('/services') },
-    { text: 'Product', href: getPermalink('/product') },
-    { text: 'Sales', href: getPermalink('/sales') },
-  ],
   secondaryLinks: [
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
     { text: "Contact", href: getPermalink('/contact')}

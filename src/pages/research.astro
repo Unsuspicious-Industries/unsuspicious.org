@@ -1,0 +1,40 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Headline from '~/components/ui/Headline.astro';
+import ArticleList from '~/components/ui/ArticleList.astro';
+
+const metadata = {
+  title: 'Research — Unsuspicious Industries',
+  description: 'Showcasing the important research works made by the team at Unsuspicious Industries.',
+};
+
+const articles = [
+
+];
+---
+
+<Layout metadata={metadata}>
+  <!-- Research Page Header ********* -->
+  <Headline
+    title="Our Research"
+    subtitle="Showcasing the important research works made by the team at Unsuspicious Industries."
+    tagline="Research & Innovation"
+    classes={{
+      title: "text-4xl font-bold text-center  mb-4",
+      subtitle: "text-2xl text-center text-secondary mb-2",
+      tagline: "text-lg text-center text-tertiary mb-6",
+    }}
+  />
+
+  <!-- Articles List **************** -->
+  <ArticleList
+    articles={articles}
+    classes={{
+      container: "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+      article: "mb-8",
+      title: "text-2xl font-semibold ",
+      description: "mt-2 text-base text-secondary",
+      preprintLink: "mt-2 text-accent underline",
+    }}
+  />
+</Layout>

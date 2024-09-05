@@ -1,6 +1,7 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
+import Features4 from '~/components/widgets/Features4.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
@@ -16,8 +17,8 @@ const metadata = {
 
   <Hero
     tagline="About Us"
-    title="We are a team dedicated to social justice"
-    subtitle='At [Your Organization Name], we are a passionate team committed to promoting social justice, supporting marginalized communities, and fostering artistic expression. We strive to create a more equitable and inclusive society through our various initiatives and programs. Our dedication to ethical practices and community engagement drives us to continuously innovate and improve our efforts. We are proud of our achievements and the positive impact we have made in the lives of many. Join us in our mission to make a difference.'
+    title="The Unsuspicious Team"
+    subtitle="At Unsuspicious Industries, we're dedicated to creating cutting-edge technology solutions that drive human progress and improve lives. Our team of passionate innovators is committed to revolutionizing the way you tackle modern challenges and empowering you to succeed."
     image={{
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
       alt: 'Community Gathering',
@@ -88,64 +89,52 @@ const metadata = {
     ]}
   />
 
-  <!-- Steps2 Widget ****************** -->
+  <!-- Our Team Section ************** -->
 
-  <Steps2
-    title="Our Achievements"
-    subtitle="We are proud of the impact we have made through our dedication to social justice and artistic expression."
-    isReversed={true}
-    callToAction={{
-      text: 'Learn More',
-      href: '/achievements',
-    }}
+  <Features4
+    title="Our Team"
+    tagline="Meet the Founders"
+    columns={2}
     items={[
       {
-        title: 'Tech Innovations',
-        description: 'Our projects have driven technological advancements, delivering cutting-edge solutions and fostering innovation.',
-        icon: 'tabler:device-laptop',
+        title: 'CRN',
+        description:
+          'Ex-entrepreneur in edge markets. ',
+        icon: 'tabler:briefcase',
       },
       {
-        title: 'Art Exhibitions',
+        title: 'PKD',
         description:
-          'We have organized numerous art exhibitions that showcase the work of marginalized artists and raise awareness about social justice issues.',
-        icon: 'tabler:paint-filled',
-      },
-      {
-        title: 'Advocacy Success',
-        description:
-          'Our advocacy campaigns have led to significant policy changes and increased awareness about critical social justice issues.',
-        icon: 'tabler:speakerphone',
+          'Researcher in Low-level programming and AI/ML. ',
+        icon: 'tabler:brain',
       },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
+  <!-- Our Departments Section ************** -->
 
   <Features3
-    title="Our Locations"
-    subtitle="Find us in these communities"
-    columns={4}
+    title="Our Departments"
+    columns={3}
     items={[
       {
-        title: 'New York, USA',
-        description: '123 Main Street, New York, NY 10001',
-        icon: 'tabler:map-pin',
+        title: 'Sales & Finances',
+        description:
+          'Our Sales & Finances department focuses on fundraising, partnerships, and financial management to support our initiatives. We also engage in commercial activities to generate revenue for our programs.',
+        icon: 'tabler:coin-bitcoin',
       },
       {
-        title: 'London, UK',
-        description: '456 High Street, London, UK W1D 3QY',
-        icon: 'tabler:map-pin',
+        title: 'Research & Developpement',
+        description:
+          'Our R&D department is dedicated to advancing technological solutions and conducting research to address social justice issues. We collaborate with experts in various fields to develop innovative projects and initiatives.',
+        icon: 'tabler:flask',
       },
       {
-        title: 'Sydney, Australia',
-        description: '789 George Street, Sydney, NSW 2000',
-        icon: 'tabler:map-pin',
-      },
-      {
-        title: 'Cape Town, South Africa',
-        description: '101 Long Street, Cape Town, 8001',
-        icon: 'tabler:map-pin',
-      },
+        title: 'Design & Art',
+        description:
+          'Our Design & Art department is responsible for creating visual content, artistic projects, and promotional materials for our programs. We believe in the power of art to inspire change and raise awareness about social justice issues.',
+        icon: 'tabler:book',
+      }
     ]}
   />
 

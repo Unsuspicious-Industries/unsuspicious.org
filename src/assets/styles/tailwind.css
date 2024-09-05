@@ -3,21 +3,30 @@
 @tailwind utilities;
 
 @layer utilities {
-  .bg-page {
-    background-color: var(--aw-color-bg-page);
-  }
-  .bg-dark {
-    background-color: var(--aw-color-bg-page-dark);
-  }
-  .bg-light {
-    background-color: var(--aw-color-bg-page);
-  }
+
   .text-page {
     color: var(--aw-color-text-page);
   }
   .text-muted {
     color: var(--aw-color-text-muted);
   }
+  .text-heading {
+    color: var(--aw-color-text-heading);
+  }
+  .text-primary {
+    color: var(--aw-color-primary);
+  }
+
+  .bg-page {
+    background-color: var(--aw-color-bg-page);
+  }
+  .bg-ft {
+    background-color: var(--aw-color-bg-fancy);
+  }
+  .bg-fancy {
+      background: linear-gradient(90deg, var(--aw-color-bg-ft) 0%, var(--aw-color-bg-fancy) 100%);
+  }
+  
 }
 
 @layer components {
