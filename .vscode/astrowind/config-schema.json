@@ -428,5 +428,5 @@
       "required": ["theme", "tokens"]
     }
   },
-  "required": ["site", "metadata", "i18n", "apps", "analytics", "ui"]
+  "required": ["site", "metadata", "i18n", "apps"]
 }

@@ -17,6 +17,10 @@
     color: var(--aw-color-primary);
   }
 
+  .accent {
+    color: var(--aw-color-accent);
+  }
+
   .bg-page {
     background-color: var(--aw-color-bg-page);
   }
