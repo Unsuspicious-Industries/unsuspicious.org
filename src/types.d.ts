@@ -206,6 +206,7 @@ export interface Form {
   description?: string;
   method?: string;
   action?: string;
+  onSuccess?: (data: any) => void;
 }
 
 // WIDGETS

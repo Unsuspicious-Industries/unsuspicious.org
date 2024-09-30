@@ -1,14 +1,13 @@
 import React, { useState } from "react";
 import type { Form } from "~/types";
-
 import Button from "./FormButton";
 
+
 export default function FormContainer(FormProps: Form) {
-  const [message, setMessage] = useState<string | null>(null);
+  const [message, setMessage] = useState<{ text: string; isError: boolean } | null>(null);
 
   const submit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
     setMessage(null); // Clear the message at the start of submission
 
     const formData = new FormData(e.currentTarget);
@@ -16,12 +15,11 @@ export default function FormContainer(FormProps: Form) {
     for (let [key, value] of formData.entries()) {
       if (value === "") {
         const input = document.querySelector(`[name="${key}"]`);
-        console.log(input)
         if (input) {
           input.classList.add("ring", "ring-red-500");
           input.addEventListener("input", () => {
             input.classList.remove("ring", "ring-red-500");
-          }); 
+          });
         }
         return;
       }
@@ -37,37 +35,38 @@ export default function FormContainer(FormProps: Form) {
     }
 
     // Convert FormData to JSON
-    let object: any = {};
+    const object: Record<string, any> = {};
     formData.forEach((value, key) => { object[key] = value });
-    let json = JSON.stringify(object);
+    const json = JSON.stringify(object);
 
-    console.log(json)
+    try {
+      const response = await fetch(FormProps.action!, {
+        method: FormProps.method,
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: json,
+      });
 
-    const response = await fetch(FormProps.action!, {
-      method: FormProps.method,
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: json,
-    });
-    
-    const data = await response.json();
+      const data = await response.json();
 
-    
-
-    // if response.success is true then do something
-    if (data.success) {
-      setMessage("Done!");
-    } else {
-      setMessage(data.error);
+      if (data.success) {
+        setMessage({ text: data.message || "Done!", isError: false });
+        FormProps.onSuccess?.(data);
+      } else {
+        setMessage({ text: data.error, isError: true });
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setMessage({ text: "An error occurred during form submission.", isError: true });
     }
   }
 
   return (
     <form onSubmit={submit}>
       {message && (
-        <div className="flex justify-center items-center border-b border-t border-gray-700 font-sans py-2 my-4">
-          <h2>{message}</h2>
+        <div className={`flex justify-center items-center border-b border-t font-sans py-2 my-4 ${message.isError ? 'border-red-700 text-red-700' : 'border-gray-700'}`}>
+          <h2>{message.text}</h2>
         </div>
       )}
       {FormProps.inputs?.map((input) => (

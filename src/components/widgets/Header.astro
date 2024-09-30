@@ -3,7 +3,8 @@ import { Icon } from "astro-icon/components";
 import Logo from "~/components/Logo.astro";
 import ToggleMenu from "~/components/common/ToggleMenu.astro";
 import ToggleTheme from "~/components/common/ToggleTheme.astro";
-import Button from "~/components/ui/Button.astro"
+import Button from "~/components/ui/Button.astro";
+import ConnectionIcon from "~/components/ui/ConnectionIcon.tsx"; // Import the ConnectionIcon component
 
 import { getHomePermalink } from "~/utils/permalinks";
 import { trimSlash, getAsset } from "~/utils/permalinks";
@@ -48,9 +49,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
 
 var ThemeIcon : string;
 
-
 console.log(showToggleTheme)
-
 ---
 
 <header
@@ -133,6 +132,9 @@ console.log(showToggleTheme)
         <div class="flex">
           {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" iconName={"tabler:sun"} />}
         </div>
+        <a href="/auth" class="ml-6 rounded-full border-2 border-gray-800 p-2">
+          <ConnectionIcon iconClass="w-6 h-6 md:w-5 md:h-5 p-2" iconName={"tabler:connection"} client:load/>
+        </a>
         {
           actions?.length ? (
             <span class="ml-4 rtl:ml-0 rtl:mr-4">

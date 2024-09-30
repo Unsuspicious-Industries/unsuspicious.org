@@ -1,0 +1,46 @@
+---
+import Headline from '~/components/ui/Headline.astro';
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Contact } from '~/types';
+
+import LoginForm from '~/components/ui/LoginForm.tsx';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  tagline = await Astro.slots.render('tagline'),
+  inputs,
+  textarea,
+  disclaimer,
+  // set default for button 'Contact Us'
+  button = "Login",
+  description,
+
+  id,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props as Contact;
+
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto ${classes?.container ?? ''}`} bg={bg}>
+  <Headline title={title} subtitle={subtitle} tagline={tagline} />
+
+  {
+    inputs && (
+      <div class="flex flex-col max-w-xl mx-auto rounded-lg backdrop-blur bg-ft border-2 border-gray-300 dark:border-gray-500 bg-white dark:bg-black shadow p-4 sm:p-6 lg:p-8 w-full">
+        <LoginForm 
+          inputs={inputs}
+          textarea={textarea}
+          disclaimer={disclaimer}
+          button={button}
+          description={description}
+          method="POST"
+          action="https://cas.unsuspicious.org/auth/login"
+          client:load
+        />
+      </div>
+    )
+  }
+</WidgetWrapper>

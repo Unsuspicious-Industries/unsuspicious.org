@@ -21,6 +21,13 @@
     color: var(--aw-color-accent);
   }
 
+  .bg-accent {
+    background-color: var(--aw-color-accent);
+  }
+  .bg-primary {
+    background-color: var(--aw-color-primary);
+  }
+
   .bg-page {
     background-color: var(--aw-color-bg-page);
   }
