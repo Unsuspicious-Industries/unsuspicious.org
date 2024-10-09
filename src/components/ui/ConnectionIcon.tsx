@@ -57,7 +57,7 @@ const ConnectionIcon: React.FC<ConnectionIconProps> = ({ iconClass, iconName }) 
       {user ? (
         <span className={iconClass}>{user}</span>
       ) : (
-        <span className={iconClass}>🔓</span>
+        <span className={iconClass}>login</span>
       )}
     </div>
   );

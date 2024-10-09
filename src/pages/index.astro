@@ -7,10 +7,12 @@ import Content from '~/components/widgets/Content.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features3 from '~/components/widgets/Features3.astro';
 
 
 const metadata = {
-  title: 'Unsuspicious Industries — Pioneering Tech for Tomorrow',
+  title: 'Unsuspicious Industries',
   ignoreTitleTemplate: true,
 };
 
@@ -24,55 +26,58 @@ const metadata = {
   <Hero
     image={{ src: '~/assets/images/chip3.png', alt: 'Innovative Solutions' }}
     imageClass='height-150 sm:height-80 md:height-96 lg:height-96 xl:height-96'
+    tagline='A disruptive approach to modern challenges.'
   >
+
     <Fragment slot="title">
-      Empowering the Future with <span class="text-accent highlight">Innovative Tech</span>
+      Multidisciplinary research for <span class="text-accent highlight">human progress</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      We are Unsuspicious Industries, a team of passionate innovators dedicated to creating cutting-edge technology solutions that drive human progress and improve lives.
+      With <span class="text-accent"><s>artificial intelligence</s> Hintonian physics</span> we aim to revolutionize our interactions with the world, addressing technological limitations and paving the way for advancements in all fields of science.
     </Fragment>
   </Hero>
 
   <!-- Features Widget *************** -->
 
-  <Features
+  <Features3
     id="features"
-    tagline="Our Expertise"
-    title="Why Choose Unsuspicious Industries"
-    subtitle="A non-profit approach to cutting-edge technology with real-world applications across multiple disciplines."
+    tagline="Research & Innovation goals"
+    title="The not-suspicious way to the future."
+    subtitle="A mutidisciplinary approach to cutting-edge research."
     items={[
       {
-        title: 'Software Development Mastery',
-        description: 'Engineer your vision into reality with our full-stack software development capabilities.',
+        title: 'Software research team',
+        description: 'Our team of software engineers is dedicated to developing innovative solutions to complex problems.',
         icon: 'tabler:code',
       },
       {
-        title: 'Innovative Hardware Solutions',
-        description: 'From IoT devices to custom hardware, our designs bring your ideas to life.',
+        title: 'Hardware design lab',
+        description: 'We are researching new ways to think about computing systems, and making more efficient chips.',
         icon: 'tabler:cpu',
       },
       {
-        title: 'Advanced Artificial Intelligence',
-        description: 'Harness the power of AI to drive efficiency, innovation, and smarter solutions.',
+        title: 'AI & Machine Learning',
+        description: 'The AI team works on both learning algorithms and generation paradigms.',
         icon: 'tabler:brain',
       },
       {
-        title: 'A Social vision on the Future',
-        description: 'We believe in a future where technology is used to improve the lives of all people, not just a select few.',
+        title: 'Social and economic research',
+        description: 'Combining advanced tech (AI, data processing, etc.) with social sciences to solve real-world problems and improve society.',
         icon: 'tabler:free-rights',
       },
       {
-        title: 'Eco-friendly Innovations',
-        description: 'Committed to sustainability, we develop solutions that benefit both technology and the planet.',
+        title: 'Biological and ecological research',
+        description: 'Leading a developemnt effort in the field of biotech and ecological research.',
         icon: 'tabler:leaf',
       },
       {
-        title: 'Artistic Innovations in the Tech World',
-        description: 'We believe that technology should be built around the `Beau',
+        title: 'Art & Creation',
+        description: 'Our vision of science is built around creativity, art and the quest of the "beau".',
         icon: 'tabler:palette',
       },
-    ]}
+    ]},
+    columns={3}
   />
 
 
@@ -86,12 +91,12 @@ const metadata = {
     stats={[
       {
         amount: '10+',
-        title: 'Projects Completed',
+        title: 'Projects in progress',
         icon: 'tabler:checkbox',
       },
       {
-        amount: '5+',
-        title: 'Happy People',
+        amount: '10+',
+        title: 'Involved researchers',
         icon: 'tabler:mood-smile',
       },
       {
@@ -107,43 +112,13 @@ const metadata = {
     ]}
   />
 
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-      id="faq"
-      tagline="Questions & Answers"
-      title="Frequently Asked Questions"
-      subtitle="Find answers to the most common questions about our social justice initiatives and how you can get involved."
-      items={[
-        {
-          title: 'What is your mission?',
-          description: 'Our mission is to promote social justice and equality by advocating for systemic change, supporting marginalized communities, and raising awareness about critical social issues.',
-        },
-        {
-          title: 'How can I get involved?',
-          description: 'There are many ways to get involved with our organization. You can volunteer your time, donate to support our initiatives, participate in our events, or help spread the word about our cause.',
-        },
-        {
-          title: 'What kind of programs do you offer?',
-          description: 'We offer a variety of programs focused on education, advocacy, and community support. These include workshops, outreach programs, policy advocacy, and support services for those affected by social injustice.',
-        },
-        {
-          title: 'How do you ensure the effectiveness of your programs?',
-          description: 'We regularly evaluate our programs to ensure they are meeting their goals and making a positive impact. We use data-driven approaches and feedback from the communities we serve to continuously improve our efforts.',
-        },
-        {
-          title: 'How can I donate?',
-          description: 'Donating is easy and secure. You can make a one-time donation or set up a recurring contribution through our website. Your support helps us continue our work and make a difference in the lives of those we serve.',
-        },
-      ]}
-  />
 
   <!-- Call to Action Widget ********* -->
 
   <CallToAction
     id="contact"
-    tagline="Let's Build the Future Together"
-    title="Ready to innovate?"
+    tagline="Let's Build"
+    title="Take part in the least suspicious research project"
     actions={[
       { text: 'Contact Us', href: '/contact', variant: 'primary' },
     ]}

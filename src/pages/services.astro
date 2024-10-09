@@ -2,10 +2,13 @@
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Content from '~/components/widgets/Content.astro';
 import Features2 from '~/components/widgets/Features2.astro';
+import Features from '~/components/widgets/Features.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Testimonials from '~/components/widgets/Testimonials.astro';
 import Layout from '~/layouts/PageLayout.astro';
 import { getPermalink } from '~/utils/permalinks';
+import Features3 from '~/components/widgets/Features3.astro';
+import Features4 from '~/components/widgets/Features4.astro';
 
 const metadata = {
   title: 'Services',
@@ -15,7 +18,7 @@ const metadata = {
 <!-- Hero Widget ******************* -->
 <Hero
   tagline="Services"
-  title="Empower Your Endeavors with Innovative Solutions"
+  title="Build with the Future in Mind"
   subtitle="At Unsuspicious Industries, we're committed to revolutionizing the way you tackle modern challenges. Explore our range of cutting-edge solutions designed to elevate your projects and drive success."
   image={{
     src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
@@ -23,24 +26,52 @@ const metadata = {
   }}
 />
 
-<!-- Content Widget **************** -->
+<Features
+  title="Our Services"
+  subtitle="Our team offers a great range of services, both in production and research."
+  items={[
+    {
+      title: 'Software Engineering',
+      description: 'Our team of software engineers is dedicated to developing innovative solutions to complex problems. We can help you build custom software solutions integrating the latest AI technologies.',
+      icon: 'tabler:code',
+    },
+    {
+      title: 'Research & Development',
+      description: 'We are constantly researching new ways to think about computing systems, and hardware. The unsuspicious team can provide you with expert advice and support.',  
+      icon: 'tabler:microscope',
+    },
+    {
+      title: "Counseling",
+      description: 'Thanks to our interdisciplinary team, we have developped in-house societal and political analysis tools. We can help you understand the impact of your projects on society and the environment.',
+      icon: 'tabler:presentation',
+
+    },
+    {
+      title: "Design & Industrial planning",
+      description: 'Our team of designers and engineers can help you design and plan your industrial projects. We can help you with the design of your products, the planning of your production lines, and the optimization of your supply chain.',
+      icon: 'tabler:building-factory-2',
+    }
+  ]}
+  columns={2}
+/>
+
 <Content
   isReversed
   items={[
     {
       title: 'Cutting-Edge Technology',
       description: 'We leverage the latest advancements in technology to develop solutions that stay ahead of the curve and address the evolving needs of your projects.',
-      icon: 'tabler:wand',
+      icon: 'tabler:settings',
     },
     {
       title: 'User-Centric Design',
       description: 'Our solutions are designed with the end user in mind, ensuring intuitive interfaces and seamless user experiences.',
-      icon: 'tabler:settings',
+      icon: 'tabler:user-heart',
     },
     {
-      title: 'Scalable Architecture',
-      description: 'We employ scalable architectures that grow with your business, allowing for seamless expansion and adaptation to changing requirements.',
-      icon: 'tabler:presentation',
+      title: 'Adaptive architecture',
+      description: 'We design modular and scalable architectures that can adapt to the changing needs of your projects, ensuring long-term success and sustainability.',
+      icon: 'tabler:components',
     },
   ]}
   image={{
@@ -52,35 +83,7 @@ const metadata = {
   <h3 class="text-2xl font-bold tracking-tight  sm:text-3xl mb-2">Our Approach</h3>
 </Fragment>
 </Content>
-<!-- Content Widget **************** -->
-<Content
-  isAfterContent
-  items={[
-  {
-    title: 'Continuous Innovation',
-    description: 'We are committed to ongoing innovation, continuously enhancing our solutions to keep pace with technological advancements and market trends.',
-    icon: 'tabler:clock',
-  },
-  {
-    title: 'Customer Satisfaction',
-    description: 'We prioritize customer satisfaction, striving to exceed expectations and deliver solutions that drive tangible results for your projects.',
-    icon: 'tabler:school',
-  },
-  {
-    title: 'Sustainable Impact',
-    description: 'We believe in creating solutions that not only deliver immediate benefits but also contribute to a sustainable and prosperous future for all stakeholders.',
-    icon: 'tabler:coin',
-  },
-  ]}
-  image={{
-    src: 'https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Benefits Image',
-  }}
-  >
-  <Fragment slot="content">
-    <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Our Commitment</h3>
-  </Fragment>
-</Content>
+
 
 <!-- CallToAction Widget *********** -->
 <CallToAction
@@ -90,6 +93,6 @@ actions={[{
   href: '/',
 }]}
 title="Experience the Unsuspicious Difference"
-subtitle="Unlock the potential of your projects with our innovative solutions. Whether you're in logistics, healthcare, retail, or beyond, we're here to help you succeed."
+subtitle="Unlock the potential of your projects with our help. Whether you're in logistics, healthcare, retail, or beyond, we're here to help you succeed."
 />
 </Layout>

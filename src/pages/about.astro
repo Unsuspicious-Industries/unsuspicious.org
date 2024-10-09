@@ -1,8 +1,10 @@
 ---
+import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import Features4 from '~/components/widgets/Features4.astro';
 import Hero from '~/components/widgets/Hero.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
@@ -25,75 +27,10 @@ const metadata = {
     }}
   />
 
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    title="Our Impact"
-    stats={[
-      { title: 'Ideas', amount: '50+' },
-      { title: 'Research Projects', amount: '10+' },
-      { title: 'Art Projects', amount: '5+' },
-      { title: 'Advocacy Campaigns', amount: '20+' },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Our Initiatives"
-    columns={3}
-    isAfterContent={true}
-    items={[
-        {
-        title: 'Tech Outreach',
-        description:
-          'We engage with tech communities to provide support, resources, and advocacy for technological advancements. Our outreach programs aim to empower developers and promote innovation.',
-        icon: 'tabler:device-laptop',
-      },
-      {
-        title: 'Artistic Expression',
-        description:
-          'We believe in the power of art to inspire change. Our art programs provide a platform for marginalized voices to express themselves and raise awareness about social justice issues.',
-        icon: 'tabler:palette',
-      },
-      {
-        title: 'Educational Workshops',
-        description:
-          'Our educational workshops focus on raising awareness about social justice, providing tools for advocacy, and fostering a deeper understanding of systemic issues.',
-        icon: 'tabler:book',
-      }
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our Values"
-    subtitle="We are committed to promoting social justice and supporting artistic expression."
-    items={[
-      {
-        title: 'Inclusivity',
-        description:
-          'We strive to create an inclusive environment where everyone feels valued and respected. Our programs are designed to be accessible to all.',
-      },
-      {
-        title: 'Empowerment',
-        description:
-          'We believe in empowering individuals and communities to take action and create positive change. Our initiatives provide the tools and support needed to make a difference.',
-      },
-      {
-        title: 'Creativity',
-        description:
-          'We encourage creativity and artistic expression as a means to inspire change and raise awareness about social justice issues.',
-      },
-    ]}
-  />
-
-  <!-- Our Team Section ************** -->
 
   <Features4
-    title="Our Team"
-    tagline="Meet the Founders"
+    title="The Founders"
+    tagline="Unsuspicious core"
     columns={2}
     items={[
       {
@@ -111,9 +48,27 @@ const metadata = {
     ]}
   />
 
+  <!-- Stats Widget ****************** -->
+  <Features4
+    title="Engineers & Researchers"
+    columns={2}
+    items={[
+      {
+        title: 'Alba',
+        description: 'Artistic director',
+        icon: 'tabler:palette',
+      },
+      {
+        title: 'Bus',
+        description: 'Engineering lead',
+        icon: 'tabler:assembly',
+      }
+    ]}
+  />
+
   <!-- Our Departments Section ************** -->
 
-  <Features3
+  <Features2
     title="Our Departments"
     columns={3}
     items={[
@@ -138,25 +93,5 @@ const metadata = {
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
 
-  <Features2
-    title="Get Involved"
-    tagline="Join Us"
-    columns={2}
-    items={[
-      {
-        title: 'Volunteer with Us',
-        description:
-          'Join our team of dedicated volunteers and help us make a difference. Your time and skills can have a significant impact on our initiatives.',
-        icon: 'tabler:heart-handshake',
-      },
-      {
-        title: 'Support Our Cause',
-        description:
-          'Your donations help us continue our work and expand our programs. Every contribution, big or small, makes a difference.',
-        icon: 'tabler:heart',
-      },
-    ]}
-  />
 </Layout>
