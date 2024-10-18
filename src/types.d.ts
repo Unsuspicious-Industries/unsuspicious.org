@@ -241,6 +241,7 @@ export interface Brands extends Headline, Widget {
 }
 
 export interface Features extends Headline, Widget {
+  link?: string;
   image?: string | unknown;
   video?: Video;
   items: Array<Item>;
