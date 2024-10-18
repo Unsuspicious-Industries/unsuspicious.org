@@ -13,7 +13,6 @@ const {
 
 const {
   container: containerClass = "",
-  // container: containerClass = "sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
   panel: panelClass = "",
   title: titleClass = "",
   description: descriptionClass = "",
@@ -43,50 +42,98 @@ const {
           description,
           icon,
           callToAction,
+          link, // New property
           classes: itemClasses = {},
         }) => (
-          <div
-            class={twMerge(
-              "relative flex flex-col",
-              panelClass,
-              itemClasses?.panel
-            )}
-          >
-            {(icon || defaultIcon) && (
-              <Icon
-                name={icon || defaultIcon}
+          link ? (
+            <a href={link} class="block">
+              <div
                 class={twMerge(
-                  "mb-2 w-10 h-10",
-                  defaultIconClass,
-                  itemClasses?.icon
+                  "relative flex flex-col",
+                  panelClass,
+                  itemClasses?.panel
                 )}
-              />
-            )}
+              >
+                {(icon || defaultIcon) && (
+                  <Icon
+                    name={icon || defaultIcon}
+                    class={twMerge(
+                      "mb-2 w-10 h-10",
+                      defaultIconClass,
+                      itemClasses?.icon
+                    )}
+                  />
+                )}
+                <div
+                  class={twMerge(
+                    "text-xl font-bold",
+                    titleClass,
+                    itemClasses?.title
+                  )}
+                >
+                  {title}
+                </div>
+                {description && (
+                  <p
+                    class={twMerge(
+                      "text-muted mt-2",
+                      descriptionClass,
+                      itemClasses?.description
+                    )}
+                    set:html={description}
+                  />
+                )}
+                {callToAction && (
+                  <div class="mt-2">
+                    <Button {...callToAction} />
+                  </div>
+                )}
+              </div>
+            </a>
+          ) : (
             <div
               class={twMerge(
-                "text-xl font-bold",
-                titleClass,
-                itemClasses?.title
+                "relative flex flex-col",
+                panelClass,
+                itemClasses?.panel
               )}
             >
-              {title}
-            </div>
-            {description && (
-              <p
+              {(icon || defaultIcon) && (
+                <Icon
+                  name={icon || defaultIcon}
+                  class={twMerge(
+                    "mb-2 w-10 h-10",
+                    defaultIconClass,
+                    itemClasses?.icon
+                  )}
+                />
+              )}
+              <div
                 class={twMerge(
-                  "text-muted mt-2",
-                  descriptionClass,
-                  itemClasses?.description
+                  "text-xl font-bold",
+                  titleClass,
+                  itemClasses?.title
                 )}
-                set:html={description}
-              />
-            )}
-            {callToAction && (
-              <div class="mt-2">
-                <Button {...callToAction} />
+              >
+                {title}
               </div>
-            )}
-          </div>
+              {description && (
+                <p
+                  class={twMerge(
+                    "text-muted mt-2",
+                    descriptionClass,
+                    itemClasses?.description
+                  )}
+                  set:html={description}
+                />
+              )}
+              {callToAction && (
+                <div class="mt-2">
+                  <Button {...callToAction} />
+                </div>
+              )}
+            </div>
+          )
         )
       )}
     </div>
