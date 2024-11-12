@@ -15,84 +15,100 @@ const metadata = {
 };
 ---
 <Layout metadata={metadata}>
-<!-- Hero Widget ******************* -->
-<Hero
-  tagline="Services"
-  title="Build with the Future in Mind"
-  subtitle="At Unsuspicious Industries, we're committed to revolutionizing the way you tackle modern challenges. Explore our range of cutting-edge solutions designed to elevate your projects and drive success."
+  <Hero
+  tagline="Solutions That Deliver"
+  title="Transform Your Ideas Into Reality"
+  subtitle="From rapid prototyping to full-scale deployment, we're your end-to-end innovation partner. Our solutions have helped companies save an average of 40% in development time."
   image={{
     src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-    alt: 'Unsuspicious Industries Office Image',
+    alt: 'Unsuspicious Industries Innovation Lab',
   }}
 />
 
 <Features
-  title="Our Services"
-  subtitle="Our team offers a great range of services, both in production and research."
+  title="Expert Solutions"
+  subtitle="Proven results across industries"
   items={[
     {
-      title: 'Software Engineering',
-      description: 'Our team of software engineers is dedicated to developing innovative solutions to complex problems. We can help you build custom software solutions integrating the latest AI technologies.',
+      title: 'AI & Software Development',
+      description: '• Custom AI solutions that cut costs by 30%\n• Cloud-native architecture\n• Rapid MVP development in 4-6 weeks\n• Performance optimization\n• 24/7 maintenance support',
       icon: 'tabler:code',
     },
     {
-      title: 'Research & Development',
-      description: 'We are constantly researching new ways to think about computing systems, and hardware. The unsuspicious team can provide you with expert advice and support.',  
+      title: 'Advanced R&D',
+      description: '• Patent-pending research methodologies\n• Data-driven insights\n• Market analysis & validation\n• Proof-of-concept development\n• Research-to-market strategy',
       icon: 'tabler:microscope',
     },
     {
-      title: "Counseling",
-      description: 'Thanks to our interdisciplinary team, we have developped in-house societal and political analysis tools. We can help you understand the impact of your projects on society and the environment.',
+      title: "Strategic Consulting",
+      description: '• Tech stack optimization\n• Growth strategy planning\n• Risk assessment\n• Competitive analysis\n• Sustainability roadmapping',
       icon: 'tabler:presentation',
-
     },
     {
-      title: "Design & Industrial planning",
-      description: 'Our team of designers and engineers can help you design and plan your industrial projects. We can help you with the design of your products, the planning of your production lines, and the optimization of your supply chain.',
+      title: "Industrial Innovation",
+      description: '• IoT implementation\n• Process automation\n• Supply chain optimization\n• Quality control systems\n• Energy efficiency solutions',
       icon: 'tabler:building-factory-2',
     }
   ]}
-  columns={2}
 />
 
-<Content
-  isReversed
+<!-- Add Success Stories -->
+<Features2
+  title="Real Results, Real Impact"
+  subtitle="See how we've helped organizations like yours"
   items={[
     {
-      title: 'Cutting-Edge Technology',
-      description: 'We leverage the latest advancements in technology to develop solutions that stay ahead of the curve and address the evolving needs of your projects.',
-      icon: 'tabler:settings',
+      title: '45% Cost Reduction',
+      description: 'Automated workflow for a Fortune 500 manufacturer',
+      icon: 'tabler:chart-arrows-vertical',
     },
     {
-      title: 'User-Centric Design',
-      description: 'Our solutions are designed with the end user in mind, ensuring intuitive interfaces and seamless user experiences.',
-      icon: 'tabler:user-heart',
+      title: '2x Faster Development',
+      description: 'AI-powered solution for healthcare provider',
+      icon: 'tabler:rocket',
     },
     {
-      title: 'Adaptive architecture',
-      description: 'We design modular and scalable architectures that can adapt to the changing needs of your projects, ensuring long-term success and sustainability.',
-      icon: 'tabler:components',
+      title: '$2M in Savings',
+      description: 'Supply chain optimization for retail chain',
+      icon: 'tabler:coin',
     },
   ]}
-  image={{
-  src: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-  alt: 'Features Image',
- }}
->
-<Fragment slot="content">
-  <h3 class="text-2xl font-bold tracking-tight  sm:text-3xl mb-2">Our Approach</h3>
-</Fragment>
-</Content>
-
-
-<!-- CallToAction Widget *********** -->
-<CallToAction
-actions={[{
-  variant: "primary",
-  text: 'Start exploring',
-  href: '/',
-}]}
-title="Experience the Unsuspicious Difference"
-subtitle="Unlock the potential of your projects with our help. Whether you're in logistics, healthcare, retail, or beyond, we're here to help you succeed."
 />
+
+<!-- Add Industries Section -->
+<Features3
+  title="Industries We Serve"
+  items={[
+    {
+      title: 'Media & Communications',
+      description: 'Content delivery and generation solutions for media companies',
+    },
+    {
+      title: 'Finance',
+      image: '[finance-image]',
+      description: 'Secure, scalable systems for financial institutions',
+    },
+    {
+      title: 'Manufacturing',
+      image: '[manufacturing-image]',
+      description: 'Smart factory solutions for Industry 4.0',
+    },
+  ]}
+/>
+
+<CallToAction
+  actions={[{
+    variant: "primary",
+    text: 'Schedule a Free Consultation',
+    href: 'https://cal.com/unsuspicious/consult',
+  },
+  {
+    variant: "secondary",
+    text: 'View Case Studies',
+    href: '/case-studies',
+  }]}
+  title="Ready to Innovate?"
+  subtitle="Book a free 30-minute consultation with our experts. We'll analyze your needs and propose a custom solution plan within 48 hours."
+/>
+
 </Layout>

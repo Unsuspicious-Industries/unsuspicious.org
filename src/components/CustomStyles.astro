@@ -1,51 +1,60 @@
 ---
-import '@fontsource/roboto';
-import '@fontsource/ibm-plex-sans';
+import '@fontsource/inter'; // Modern, clean font for body
+import '@fontsource/space-grotesk'; // Tech-forward font for headings
 ---
 
-
 <style is:inline is:global>
+
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&display=swap');
+
   :root {
-    --aw-font-sans: 'Roboto', sans-serif;
-    --aw-font-serif: 'IBM Plex Sans', serif;
+    /* Modern Typography */
+    --aw-font-sans: 'IBM Plex Mono', sans-serif;
+    --aw-font-serif: 'Space Grotesk', sans-serif;
     --aw-font-heading: var(--aw-font-serif);
 
-    --aw-color-primary: #269ecb;
-    --aw-color-secondary: rgb(108, 117, 125);
-    --aw-color-accent: #269ecb;
+    /* Light Theme - Professional Tech Colors */
+    --aw-color-primary: #2563eb; /* Vibrant blue */
+    --aw-color-secondary: #64748b; /* Sophisticated slate */
+    --aw-color-accent: #7c3aed; /* Modern purple */
 
-    --aw-color-text-heading: rgb(52, 58, 64); 
-    --aw-color-text-default: rgb(33, 37, 41);
-    --aw-color-text-muted: rgb(64, 71, 78);
+    --aw-color-text-heading: #1e293b;
+    --aw-color-text-default: #334155;
+    --aw-color-text-muted: #64748b;
 
-    --aw-color-border: rgb(233, 236, 239);
+    --aw-color-border: #e2e8f0;
 
-    --aw-color-bg-page: rgb(255, 255, 255);
-    --aw-color-bg-ft: rgb(194, 196, 198);
-    --aw-color-bg-fancy: rgb(192, 221, 252);
+    --aw-color-bg-page: #ffffff;
+    --aw-color-bg-ft: #f8fafc;
+    --aw-color-bg-fancy: #f1f5f9;
 
-    ::selection {background-color: rgb(0, 123, 255); color: rgb(255, 255, 255);}
+    ::selection {
+      background-color: rgba(37, 99, 235, 0.2);
+      color: #2563eb;
+    }
   }
 
   .dark {
-    --aw-font-sans: 'Roboto', sans-serif;
-    --aw-font-serif: 'IBM Plex Sans', serif;
-    --aw-font-heading: var(--aw-font-serif);
+    /* Dark Theme - Research Lab Aesthetic */
+    --aw-color-bg-page: #010409;    /* Main background - extremely dark */
+    --aw-color-bg-ft: #0d1117;      /* Slightly lifted elements */
+    --aw-color-bg-fancy: #161b22;   /* Featured areas */
 
-    --aw-color-primary: #269ecb;
-    --aw-color-secondary: rgb(144, 140, 164);
-    --aw-color-accent: #269ecb;
+    /* Adjusted text colors for better contrast against darker bg */
+    --aw-color-text-heading: #f8fafc;
+    --aw-color-text-default: #e2e8f0;
+    --aw-color-text-muted: #94a3b8;
 
-    --aw-color-text-heading: rgb(255, 255, 255); 
-    --aw-color-text-default: rgb(233, 236, 239);
-    --aw-color-text-muted: rgb(199, 204, 211);
+    /* Brighter accent colors to pop against darker background */
+    --aw-color-primary: #60a5fa;
+    --aw-color-secondary: #94a3b8;
+    --aw-color-accent: #a78bfa;
 
-    --aw-color-border: rgb(33, 37, 41);
 
-    --aw-color-bg-page: rgb(0, 0, 0);
-    --aw-color-bg-ft: rgb(2, 29, 54) ;
-    --aw-color-bg-fancy: rgb(3, 29, 57);
-
-    ::selection {background-color: rgb(110, 43, 113); color: rgb(255, 255, 255);}
+    ::selection {
+      background-color: rgba(96, 165, 250, 0.2);
+      color: #60a5fa;
+    }
   }
 </style>

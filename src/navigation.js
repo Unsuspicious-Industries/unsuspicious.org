@@ -21,7 +21,7 @@ export const headerData = {
     },
     {
       text: 'research',
-      href: getPermalink('/research'),
+      href: 'https://unsuspicious.science',
     },
     {
       text: 'blog',

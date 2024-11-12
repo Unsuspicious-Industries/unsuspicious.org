@@ -12,65 +12,71 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contact" title="Let's build together" />
-  <ContactUs
-    title="Write us"
-    inputs={[
-      {
-        type: 'text',
-        name: 'name',
-        label: 'Name',
-      },
-      {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
-      },
-    ]}
-    textarea={{
-      label: 'Message',
-    }}
-    disclaimer={{
-      label:
-        'By submitting this contact form, you acknowledge and agree for the unsuspicious collection of information.',
-    }}
-    description="The team is busy working... It might take some time..."
-  />
+  
 
-  <!-- Features2 Widget ************** -->
 
-  <Features2
-    title="Unsuspicious Help"
-    items={[
-      {
-        title: 'Research support',
-        description:
-          'Write us with questions about the topics we work on, the team or a specific aspect of the project?',
-      },
-      {
-        title: 'Contact sales',
-        description:
-          'Chat with us for questions about purchases, our API, and trading options.',
-      },
-      {
-        title: 'General contact',
-        description: `Chat with us about research questions, project ideas, or contribution to the unsuspicious project.`,
-      },
-      {
-        title: 'Phone',
-        description: '',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Email',
-        description: 'contact@unsuspicious.org',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Location',
-        description: 'Paris, France',
-        icon: 'tabler:map-pin',
-      },
-    ]}
-  />
+<HeroText
+tagline="Get in Touch"
+title="Join the Innovation Journey"
+/>
+
+<ContactUs
+title="Reach Out to Our Team"
+description="Our researchers are working on breakthrough innovations. We'll get back to you within 24-48 hours."
+inputs={[
+  {
+    type: 'text',
+    name: 'name',
+    label: 'Your Name',
+  },
+  {
+    type: 'email',
+    name: 'email',
+    label: 'Professional Email',
+  },
+]}
+textarea={{
+  label: 'Tell Us About Your Interest',
+}}
+disclaimer={{
+  label: 'By submitting this form, you agree to our totally unsuspicious data collection practices. Your information is handled with the utmost discretion (and a hint of mystery).',
+}}
+/>
+
+<Features2
+title="Connect With Us"
+subtitle="Multiple ways to reach our research teams"
+items={[
+  {
+    title: 'Research Collaboration',
+    description: "Interested in our research areas? Let's discuss potential collaborations or specific projects.",
+    icon: 'tabler:brain',
+  },
+  {
+    title: 'Business Inquiries',
+    description: 'For API access, commercial applications, and partnership opportunities.',
+    icon: 'tabler:businessplan',
+  },
+  {
+    title: 'Join Our Team',
+    description: "Looking to contribute to groundbreaking research? We're always seeking brilliant minds.",
+    icon: 'tabler:users',
+  },
+  {
+    title: 'Direct Line',
+    description: '+33 7 57 48 67 30',
+    icon: 'tabler:headset',
+  },
+  {
+    title: 'Email Us',
+    description: 'contact@unsuspicious.org',
+    icon: 'tabler:mail',
+  },
+  {
+    title: 'Visit Us',
+    description: 'Paris, France',
+    icon: 'tabler:map-pin',
+  },
+]}
+/>
 </Layout>
