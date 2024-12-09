@@ -82,7 +82,7 @@ const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
 };
 
 
-const DEFAULT_SITE_NAME = 'Website';
+const DEFAULT_SITE_NAME = 'unsuspicious.org';
 
 const getSite = () => {
   const _default = {

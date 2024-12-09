@@ -1,0 +1,65 @@
+---
+title: 'Lazy Engineers'
+tags: ['engineering', 'design patterns', 'programming']
+author: 'pkd'
+excerpt: 'The art of productive laziness in software engineering'
+date: '2024-12-09'
+---
+
+
+> I choose a lazy person to do a hard job. Because a lazy person will find an easy way to do it.
+
+This quote, often attributed to Bill Gates, embodies a specificity of software in the engineering world:  laziness (or at least a specific manifestation of it) can be a powerful force for elegant solutions.
+
+## The Two Faces of Laziness
+
+In my recent work on [HCML](https://github.com/Unsuspicious-Industries/HCML), I've encountered both productive and destructive forms of laziness. Let's examine them through concrete examples.
+
+### The Seductive Path
+
+Consider this initial implementation of a variable lookup in HCML:
+
+```c
+struct html_tag* get_var(struct html_tag* vars, char* name) {
+    for (int i = 0; i < vars->childs_count; i++) {
+        if (strcmp(vars->childs[i]->name, name) == 0) {
+            return vars->childs[i];
+        }
+    }
+    return NULL;
+}
+```
+
+This approach represents the dangerous kind of laziness - reusing existing structures because they're "good enough". While it works, it creates hidden complexity and future maintenance headaches.
+
+### The Enlightened Way
+
+True lazy engineering means investing initial effort to be lazier later. It means:
+- Spending time on proper data structures
+- Writing clear documentation
+- Building testable components
+
+The goal isn't to write less code, but to write code that requires less maintenance, less debugging, and less explanation.
+
+## When to Be Lazy
+
+Productive laziness manifests in:
+- Automation of repetitive tasks
+- Creation of self-documenting interfaces
+- Design of minimal, focused systems
+
+Avoid laziness in:
+- Core architecture decisions
+- Error handling
+- Documentation of critical components
+
+## The Cost of Quick Fixes
+
+Every "I'll fix it later" adds to your technical debt. Every "good enough for now" becomes a permanent solution. The truly lazy engineer understands that quick fixes often require more total effort than doing it right the first time.
+
+In HCML, this meant rewriting the variable system from scratch when the limitations of the HTML-based approach became apparent. The initial "lazy" solution cost more time than a proper implementation would have.
+
+## Conclusion
+
+The art of lazy engineering isn't about avoiding work - it's about being strategic with effort, and replacing countless hours of low-effort work with a few of thought intensive design. Build systems that let you be genuinely lazy in the long run, not just in the moment.
+

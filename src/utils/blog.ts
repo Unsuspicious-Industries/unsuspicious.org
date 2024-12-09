@@ -33,7 +33,7 @@ const generatePermalink = async ({
     .replace('%minute%', minute)
     .replace('%second%', second);
 
-  return permalink
+  return `${BLOG_BASE}/${permalink}`
     .split('/')
     .map((el) => trimSlash(el))
     .filter((el) => !!el)
