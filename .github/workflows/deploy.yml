@@ -14,18 +14,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Set up GitHub App token
-        id: gh_app_token
-        uses: tibdex/github-app-token@v1
-        with:
-          app_id: ${{ secrets.GH_APP_ID }}
-          private_key: ${{ secrets.GH_APP_PRIVATE_KEY }}
-
       - name: Checkout repository and submodules
         uses: actions/checkout@v4
         with:
           submodules: true
-          token: ${{ steps.gh_app_token.outputs.token }}
 
       - name: Install and build with Astro
         uses: withastro/action@v2
@@ -44,7 +36,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Download site artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: site
           path: dist/
