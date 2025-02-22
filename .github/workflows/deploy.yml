@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: read  # Minimal permissions needed
   pages: write
   id-token: write
 
@@ -17,7 +17,7 @@ jobs:
       - name: Checkout repository and submodules
         uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: recursive  # This clones all submodules
 
       - name: Install and build with Astro
         uses: withastro/action@v2
