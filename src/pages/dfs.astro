@@ -1,0 +1,143 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Features from '~/components/widgets/Features.astro';
+import Content from '~/components/widgets/Content.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import type { MetaData } from '~/types';
+
+const metadata:MetaData = {
+  title: 'DFS Lab',
+  description: 'Pushing the boundaries of constraint generation and type theory',
+  
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero
+    tagline="Dynamic Formal Systems Laboratory"
+    title="Where mathematics meets <span class='text-accent highlight'>machine intelligence</span>"
+    subtitle="At the DFS Lab, we bridge the gap between pure mathematics and artificial intelligence through constraint generation and advanced formal systems. Our research in System F, System T, and beyond is reshaping how AI understands logic, proof, and reasoning."
+    image={{
+      src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'Mathematical formulas and AI visualization',
+    }}
+/>
+
+  <!-- Content Widget **************** -->
+  <Content
+    id="about"
+    tagline="The Frontier of Formal AI"
+    title="Constraint Generation Meets Type Theory"
+    subtitle="Our approach to AI isn't just about neural networks - it's about fundamental mathematical structures that govern reasoning itself."
+    items={[
+      {
+        title: 'System F & Polymorphic Types',
+        description: 'Leveraging second-order lambda calculus to create AI systems that understand abstract mathematical concepts.',
+      },
+      {
+        title: 'System T & Recursive Functions',
+        description: 'Building AI that can reason about computation itself using Gödel\'s System T for primitive recursive functions.',
+      },
+      {
+        title: 'Constraint Generation',
+        description: 'Dynamic generation of logical constraints that guide AI reasoning in mathematically rigorous ways.',
+      },
+    ]}
+    image={{
+      src: '~/assets/images/blueprint.png',
+      alt: 'Abstract mathematical network visualization',
+    }}
+    imageClass="rounded-lg shadow-lg"
+  />
+
+  <!-- Features Widget *************** -->
+  <Features
+    id="research"
+    tagline="Research Areas"
+    title="Mathematical AI at its Core"
+    subtitle="Our research spans the intersection of formal logic, type theory, and artificial intelligence"
+    items={[
+      {
+        title: 'Constraint-Based Reasoning',
+        description: 'Developing AI systems that generate and solve complex logical constraints in real-time.',
+        icon: 'tabler:math-symbols',
+      },
+      {
+        title: 'Type-Theoretic AI',
+        description: 'Using advanced type systems to create AI that understands mathematical proofs and abstractions.',
+        icon: 'tabler:topology-complex',
+      },
+      {
+        title: 'Formal Verification',
+        description: 'Building AI systems whose reasoning can be formally verified and mathematically proven correct.',
+        icon: 'tabler:shield-check',
+      },
+      {
+        title: 'Dynamic Logic Systems',
+        description: 'Creating adaptive logical frameworks that evolve and optimize their reasoning patterns.',
+        icon: 'tabler:arrows-exchange',
+      },
+      {
+        title: 'Proof Synthesis',
+        description: 'AI that can generate mathematical proofs and verify their correctness using formal methods.',
+        icon: 'tabler:checkup-list',
+      },
+      {
+        title: 'Meta-Mathematical AI',
+        description: 'Systems that reason about mathematics itself, understanding the structure of mathematical knowledge.',
+        icon: 'tabler:infinity',
+      },
+    ]}
+    columns={3}
+  />
+
+  <!-- Stats Widget ****************** -->
+  <Stats
+    id="stats"
+    title="DFS Lab Metrics"
+    subtitle="Quantifying our impact on formal AI research"
+    tagline="Research Impact"
+    stats={[
+      {
+        amount: '47',
+        title: 'Formal Systems Implemented',
+        icon: 'tabler:math-symbols',
+      },
+      {
+        amount: '12',
+        title: 'Research Papers In Progress',
+        icon: 'tabler:file-text',
+      },
+      {
+        amount: '3',
+        title: 'Potentially Breakthrough Theorems',
+        icon: 'tabler:trophy',
+      },
+      {
+        amount: '∞',
+        title: 'Lines of Proof Code',
+        icon: 'tabler:certificate',
+      },
+    ]}
+  />
+
+  <!-- Hero2 Widget ****************** -->
+  <Hero2
+    tagline="Current Projects"
+    title="The Next Generation of Mathematical AI"
+    subtitle="Our flagship project combines Typed lambda-calculi polymorphism with dynamic constraint generation to create AI systems that can reason about abstract mathematical concepts with unprecedented depth and flexibility. AI that's not just a stochastic parrot, but a truth-seeking automaton."
+    actions={[
+      { variant: 'primary', text: 'Research Papers', href: 'unsuspicious.science' },
+      { text: 'Collaborate', href: '/contact' },
+    ]}
+    image={{
+      src: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      alt: 'AI and mathematics visualization',
+    }}
+  />
+
+</Layout>

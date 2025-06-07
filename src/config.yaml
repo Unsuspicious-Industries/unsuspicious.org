@@ -10,8 +10,8 @@ site:
 metadata:
   title:
     default: USI
-    template: '%s — USI'
-  description: "\U0001F680 Unsuspicious Industries is a multidisciplinary tech company that specializes in creating innovative solutions for the modern world. We are a team of passionate individuals who are dedicated to creating the best products and services for our clients. Our goal is to make the world a better place by providing cutting-edge technology that is both reliable and efficient\U0001F680"
+    template: '%s | USI'
+  description: "Unsuspicious Industries is a multidisciplinary tech company that specializes in creating innovative solutions for the modern world. We are a team of passionate individuals who are dedicated to creating the best products and services for our clients. Our goal is to make the world a better place by providing cutting-edge technology that is both reliable and efficient"
   robots:
     index: true
     follow: true
