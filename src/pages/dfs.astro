@@ -7,12 +7,11 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import type { MetaData } from '~/types';
-import DfsLogo from '~/assets/images/dfs-logo.png'; // Import logo as module
+import DfsLogo from '~/assets/images/dfs-logo.png';
 
-const metadata:MetaData = {
-  title: 'DFS Lab',
-  description: 'Pushing the boundaries of constraint generation and type theory',
-  
+const metadata: MetaData = {
+  title: 'DFS Lab - Dynamic Formal Systems Laboratory',
+  description: 'Advancing artificial intelligence through formal methods, type theory, and constraint generation. Research at the intersection of mathematics and machine intelligence.',
 };
 ---
 
@@ -20,37 +19,37 @@ const metadata:MetaData = {
   <!-- Hero Widget ******************* -->
   <Hero
     tagline="Dynamic Formal Systems Laboratory"
-    title="Where mathematics meets <span class='text-accent highlight'>machine intelligence</span>"
-    subtitle="At the DFS Lab, we bridge the gap between pure mathematics and artificial intelligence through constraint generation and advanced formal systems. Our research in System F, System T, and beyond is reshaping how AI understands logic, proof, and reasoning."
+    title="Advancing AI through <span class='text-accent highlight'>mathematical foundations</span>"
+    subtitle="The DFS Lab explores the intersection of formal logic, type theory, and artificial intelligence. We develop mathematically rigorous AI systems using advanced constraint generation and formal verification methods."
     image={{
       src: 'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
       alt: 'Mathematical formulas and AI visualization',
     }}
-/>
+  />
 
   <!-- Content Widget **************** -->
   <Content
     id="about"
-    tagline="The Frontier of Formal AI"
-    title="Constraint Generation Meets Type Theory"
-    subtitle="Our approach to AI isn't just about neural networks - it's about fundamental mathematical structures that govern reasoning itself."
+    tagline="Research Focus"
+    title="Formal Methods for Intelligent Systems"
+    subtitle="Our research combines theoretical foundations with practical applications, creating AI systems that are both powerful and mathematically verifiable."
     items={[
       {
-        title: 'System F & Polymorphic Types',
-        description: 'Leveraging second-order lambda calculus to create AI systems that understand abstract mathematical concepts.',
+        title: 'Type-Theoretic AI',
+        description: 'Developing AI systems based on System F and polymorphic lambda calculus, enabling reasoning about abstract mathematical structures and proofs.',
       },
       {
-        title: 'System T & Recursive Functions',
-        description: 'Building AI that can reason about computation itself using Gödel\'s System T for primitive recursive functions.',
+        title: 'Recursive Function Theory',
+        description: 'Implementing Gödel\'s System T to create AI that can reason about computation, recursion, and mathematical induction.',
       },
       {
-        title: 'Constraint Generation',
-        description: 'Dynamic generation of logical constraints that guide AI reasoning in mathematically rigorous ways.',
+        title: 'Dynamic Constraint Systems',
+        description: 'Building adaptive constraint generation frameworks that guide AI reasoning through mathematically sound logical structures.',
       },
     ]}
     image={{
       src: '~/assets/images/blueprint.png',
-      alt: 'Abstract mathematical network visualization',
+      alt: 'Mathematical network visualization',
     }}
     imageClass="rounded-lg shadow-lg"
   />
@@ -59,38 +58,38 @@ const metadata:MetaData = {
   <Features
     id="research"
     tagline="Research Areas"
-    title="Mathematical AI at its Core"
-    subtitle="Our research spans the intersection of formal logic, type theory, and artificial intelligence"
+    title="Core Research Domains"
+    subtitle="Our interdisciplinary approach spans theoretical computer science, mathematical logic, and artificial intelligence"
     items={[
       {
         title: 'Constraint-Based Reasoning',
-        description: 'Developing AI systems that generate and solve complex logical constraints in real-time.',
+        description: 'Developing AI systems that generate, manipulate, and solve complex logical constraints in real-time applications.',
         icon: 'tabler:math-symbols',
       },
       {
-        title: 'Type-Theoretic AI',
-        description: 'Using advanced type systems to create AI that understands mathematical proofs and abstractions.',
-        icon: 'tabler:topology-complex',
-      },
-      {
         title: 'Formal Verification',
-        description: 'Building AI systems whose reasoning can be formally verified and mathematically proven correct.',
+        description: 'Creating AI systems whose reasoning processes can be formally verified and mathematically proven correct.',
         icon: 'tabler:shield-check',
       },
       {
-        title: 'Dynamic Logic Systems',
-        description: 'Creating adaptive logical frameworks that evolve and optimize their reasoning patterns.',
-        icon: 'tabler:arrows-exchange',
-      },
-      {
         title: 'Proof Synthesis',
-        description: 'AI that can generate mathematical proofs and verify their correctness using formal methods.',
+        description: 'Building AI that can construct mathematical proofs and verify their correctness using automated theorem proving.',
         icon: 'tabler:checkup-list',
       },
       {
-        title: 'Meta-Mathematical AI',
-        description: 'Systems that reason about mathematics itself, understanding the structure of mathematical knowledge.',
+        title: 'Type System Design',
+        description: 'Advancing dependent types and higher-order logic to create more expressive AI reasoning capabilities.',
+        icon: 'tabler:topology-complex',
+      },
+      {
+        title: 'Meta-Mathematical Reasoning',
+        description: 'Developing systems that can reason about mathematical structures, theories, and their relationships.',
         icon: 'tabler:infinity',
+      },
+      {
+        title: 'Adaptive Logic Systems',
+        description: 'Creating dynamic logical frameworks that can evolve and optimize their reasoning strategies.',
+        icon: 'tabler:arrows-exchange',
       },
     ]}
     columns={3}
@@ -99,12 +98,12 @@ const metadata:MetaData = {
   <!-- Stats Widget ****************** -->
   <Stats
     id="stats"
-    title="DFS Lab Metrics"
-    subtitle="Quantifying our impact on formal AI research"
-    tagline="Research Impact"
+    title="Research Impact"
+    subtitle="Measuring our contributions to formal AI research"
+    tagline="Current Metrics"
     stats={[
       {
-        amount: '47',
+        amount: '5',
         title: 'Formal Systems Implemented',
         icon: 'tabler:math-symbols',
       },
@@ -129,11 +128,11 @@ const metadata:MetaData = {
   <!-- Hero2 Widget ****************** -->
   <Hero2
     tagline="Current Projects"
-    title="The Next Generation of Mathematical AI"
-    subtitle="Our flagship project combines Typed lambda-calculi polymorphism with dynamic constraint generation to create AI systems that can reason about abstract mathematical concepts with unprecedented depth and flexibility. AI that's not just a stochastic parrot, but a truth-seeking automaton."
+    title="Next-Generation Mathematical AI"
+    subtitle="Our flagship research combines polymorphic type systems with dynamic constraint generation to create AI systems capable of sophisticated mathematical reasoning. We're building AI that doesn't just process information, but truly understands mathematical structure and logical relationships."
     actions={[
-      { variant: 'primary', text: 'Research Papers', href: 'unsuspicious.science' },
-      { text: 'Collaborate', href: '/contact' },
+      { variant: 'primary', text: 'Research Publications', href: '/publications' },
+      { text: 'Collaborate With Us', href: '/contact' },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1611273426858-450d8e3c9fce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
