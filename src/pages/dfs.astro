@@ -7,6 +7,7 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import type { MetaData } from '~/types';
+import DfsLogo from '~/assets/images/dfs-logo.png'; // Import logo as module
 
 const metadata:MetaData = {
   title: 'DFS Lab',
@@ -15,7 +16,7 @@ const metadata:MetaData = {
 };
 ---
 
-<Layout metadata={metadata} logoSrc={import.meta.env.BASE_URL + 'src/assets/images/dfs-logo.png'} logoName="Dynamic Formal Systems" logoAcronym="DFS">
+<Layout metadata={metadata} logoSrc={DfsLogo.src} logoName="Dynamic Formal Systems" logoAcronym="DFS">
   <!-- Hero Widget ******************* -->
   <Hero
     tagline="Dynamic Formal Systems Laboratory"
