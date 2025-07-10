@@ -9,19 +9,22 @@ import type { MetaData } from '~/types';
 
 export interface Props {
   metadata?: MetaData;
+  logoSrc?: string;
+  logoName?: string;
+  logoAcronym?: string;
 }
 
-const { metadata } = Astro.props;
+const { metadata, logoSrc, logoName, logoAcronym } = Astro.props;
 ---
 
 <Layout metadata={metadata}>
   <slot name="header">
-    <Header {...headerData} isSticky showToggleTheme/>
+    <Header {...headerData} isSticky showToggleTheme logoSrc={logoSrc} logoName={logoName} logoAcronym={logoAcronym}/>
   </slot>
   <main>
     <slot />
   </main>
   <slot name="footer">
-    <Footer {...footerData as Props} />
+    <Footer links={[]} secondaryLinks={footerData.secondaryLinks} socialLinks={footerData.socialLinks} footNote={footerData.footNote} />
   </slot>
 </Layout>
