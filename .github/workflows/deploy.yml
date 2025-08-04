@@ -1,48 +1,49 @@
-name: Deploy to GitHub Pages
 
-on:
-  push:
-    branches: [ main ]
-  workflow_dispatch:
+#name: Deploy to GitHub Pages
 
-permissions:
-  contents: read  # Minimal permissions needed
-  pages: write
-  id-token: write
+#on:
+#  push:
+#    branches: [ main ]
+#  workflow_dispatch:
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository and submodules
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive  # This clones all submodules
+#permissions:
+#  contents: read  # Minimal permissions needed
+#  pages: write
+#  id-token: write
 
-      - name: Install and build with Astro
-        uses: withastro/action@v2
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Checkout repository and submodules
+#        uses: actions/checkout@v4
+#        with:
+#          submodules: recursive  # This clones all submodules
 
-      - name: Upload site artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: site
-          path: dist/
+#      - name: Install and build with Astro
+#        uses: withastro/action@v2
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Download site artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: site
-          path: dist/
+#      - name: Upload site artifact
+#        uses: actions/upload-artifact@v4
+#        with:
+#          name: site
+#          path: dist/
 
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
-        with:
-          path: 'dist/'
+#  deploy:
+#    needs: build
+#    runs-on: ubuntu-latest
+#    environment:
+#      name: github-pages
+#      url: ${{ steps.deployment.outputs.page_url }}
+#    steps:
+#      - name: Download site artifact
+#        uses: actions/download-artifact@v4
+#        with:
+#          name: site
+#          path: dist/
+
+#      - name: Deploy to GitHub Pages
+#        id: deployment
+#        uses: actions/deploy-pages@v4
+#        with:
+#          path: 'dist/'
