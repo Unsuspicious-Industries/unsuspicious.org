@@ -61,14 +61,6 @@ export interface AppBlogConfig {
     };
   };
 }
-export interface AnalyticsConfig {
-  vendors: {
-    googleAnalytics: {
-      id?: string;
-      partytown?: boolean;
-    };
-  };
-}
 
 const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
   site?: SiteConfig;
@@ -78,7 +70,6 @@ const config = yaml.load(fs.readFileSync('src/config.yaml', 'utf8')) as {
     blog?: AppBlogConfig;
   };
   ui?: unknown;
-  analytics?: unknown;
 };
 
 
@@ -189,22 +180,8 @@ const getUI = () => {
   return merge({}, _default, config?.ui ?? {});
 };
 
-const getAnalytics = () => {
-  const _default = {
-    vendors: {
-      googleAnalytics: {
-        id: undefined,
-        partytown: true,
-      },
-    },
-  };
-
-  return merge({}, _default, config?.analytics ?? {}) as AnalyticsConfig;
-};
-
 export const SITE = getSite();
 export const I18N = getI18N();
 export const METADATA = getMetadata();
 export const APP_BLOG = getAppBlog();
 export const UI = getUI();
-export const ANALYTICS = getAnalytics();

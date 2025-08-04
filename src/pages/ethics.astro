@@ -1,0 +1,46 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import type { MetaData } from '~/types';
+
+
+const metadata: MetaData = {
+    title: 'Ethics',
+};
+---
+
+<Layout metadata={metadata}>
+    <section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-4xl">
+        <div
+            class="mx-auto prose prose-lg max-w-4xl  prose-md prose-headings:font-heading prose-headings:leading-tighter prose-headings:tracking-tighter prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-img:rounded-md prose-img:shadow-lg mt-8"
+        >
+            <slot>
+                <h1>Ethics Policy</h1>
+
+                <p>Unsuspicious Industries is committed to upholding the latest discoveries in ethics and ensuring that all our practices align with the most recent technology in ethics research.
+                </p>
+
+                <h2>Our Ethics research Division</h2>
+
+                <p>In order to maximize our moral value, we have established a dedicated Ethics research division. The goal of this division is to discover new moral laws and ensure our practices align with their findings. We employ the most advanced technology, including cutting-edge philosophy, AI-assisted reasoning, polls, twitter threads, and more, to ensure our ethical standards are always up-to-date.</p>
+
+                <h2>Ethical Decision-Making</h2>
+
+                <p>We encourage a culture of ethical decision-making, where employees can launch debates on ethical dilemmas and explore new moral paths.</p>
+
+                <h2>Reporting Violations</h2>
+
+                <p>If you believe that our ethical standards have been compromised, or aren't up to date, we encourage you to report your concerns to us. We are committed to investigating all reports promptly and taking appropriate action.</p>
+
+                <h2>Continuous Improvement</h2>
+
+                <p>We are dedicated to continuously reviewing and improving our ethics policy and practices to ensure they remain relevant and effective. We actively try to get out of the hegemonic frameworks of traditional ethics by incorporating diverse perspectives and methodologies.</p>
+
+                <h2>Contact Us</h2>
+
+                <p>If you have any questions or concerns about our Ethics Policy, please contact us at <a href="mailto:contact@unsuspicious.org">contact@unsuspicious.org</a>.</p>
+
+                <p>Last Updated: 08-04-2025</p>
+            </slot>
+        </div>
+    </section>
+</Layout>

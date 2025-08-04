@@ -19,7 +19,7 @@ const { metadata, logoSrc, logoName, logoAcronym } = Astro.props;
 
 <Layout metadata={metadata}>
   <slot name="header">
-    <Header {...headerData} isSticky showToggleTheme logoSrc={logoSrc} logoName={logoName} logoAcronym={logoAcronym}/>
+    <Header {...headerData} isSticky showToggleTheme={false} logoSrc={logoSrc} logoName={logoName} logoAcronym={logoAcronym}/>
   </slot>
   <main>
     <slot />

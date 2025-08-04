@@ -1,0 +1,116 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Features4 from '~/components/widgets/Features4.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Faculty & Staff - Unsuspicious Research Institute',
+  description: 'Meet our distinguished faculty, research staff, and academic administration at the Unsuspicious Research Institute.',
+};
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+  <Hero
+    tagline="Academic Excellence"
+    title="Faculty & Research Staff"
+    subtitle="Our institute brings together distinguished scholars, researchers, and academic professionals who are leaders in their respective fields. Our interdisciplinary approach fosters collaboration across traditional academic boundaries, enabling groundbreaking research and scholarly contributions."
+  />
+
+  <!-- Senior Faculty Widget *************** -->
+  <Features4
+    title="Senior Research Faculty"
+    tagline="Academic Leadership"
+    columns={2}
+    items={[
+      {
+        title: 'Dr. CRN',
+        description: 'Director of Research Operations & Strategic Partnerships | Ph.D. in Economics | Former technology entrepreneur with extensive experience in research commercialization and emerging market analysis. Current research focuses on innovation ecosystems and technology transfer.',
+        icon: 'tabler:user-star',
+        link: "https://crn.unsuspicious.org"
+      },
+      {
+        title: 'Dr. PKD',
+        description: 'Chief Research Officer & Principal Investigator | Ph.D. in Computer Science | Leading researcher in computational systems, artificial intelligence, and mathematical modeling. Specializes in low-level programming architectures and machine learning foundations.',
+        icon: 'tabler:brain',
+        link: "https://pkd.unsuspicious.org"
+      },
+    ]}
+  />
+
+  <!-- Research Staff Widget *************** -->
+  <Features2
+    title="Research Staff & Graduate Students"
+    tagline="Academic Community"
+    columns={3}
+    items={[
+      {
+        title: 'Thomas M.',
+        description: 'Graduate Research Assistant in Computational Engineering | M.S. candidate specializing in high-performance computing and system optimization.',
+        icon: 'tabler:school',
+      },
+      {
+        title: 'Research Positions Available',
+        description: 'We actively recruit talented doctoral candidates, postdoctoral researchers, and visiting scholars across our research divisions.',
+        icon: 'tabler:users-plus',
+      },
+      {
+        title: 'Visiting Scholar Program',
+        description: 'Our visiting scholar program welcomes international researchers for collaborative residencies ranging from 3 months to 2 years.',
+        icon: 'tabler:world',
+      },
+    ]}
+  />
+
+  <!-- Academic Departments Widget *************** -->
+  <Features2
+    title="Research Divisions & Academic Departments"
+    subtitle="Organized scholarly communities pursuing fundamental research"
+    columns={2}
+    items={[
+      {
+        title: 'Computational Sciences Division',
+        description: 'Faculty specializing in algorithms, mathematical modeling, software systems, and computational theory.',
+        icon: 'tabler:cpu',
+      },
+      {
+        title: 'Advanced Systems Laboratory',
+        description: 'Research faculty focused on high-performance computing, quantum systems, and next-generation architectures.',
+        icon: 'tabler:circuit-board',
+      },
+      {
+        title: 'AI Research Group',
+        description: 'Interdisciplinary faculty working on machine learning theory, cognitive systems, and AI foundations.',
+        icon: 'tabler:brain',
+      },
+      {
+        title: 'Mathematical Finance Institute',
+        description: 'Faculty with expertise in financial mathematics, stochastic processes, and computational finance.',
+        icon: 'tabler:chart-line',
+      },
+      {
+        title: 'Biological & Environmental Sciences',
+        description: 'Research faculty in computational biology, ecological modeling, and environmental systems.',
+        icon: 'tabler:leaf',
+      },
+      {
+        title: 'Digital Arts & Humanities',
+        description: 'Faculty exploring technology, creativity, and human expression in digital contexts.',
+        icon: 'tabler:palette',
+      },
+    ]}
+  />
+
+  <!-- Call to Action Widget ********* -->
+  <CallToAction
+    title="Join Our Academic Community"
+    subtitle="Opportunities for scholars, researchers, and graduate students"
+    actions={[
+      { text: 'Faculty Positions', href: '/careers', variant: 'primary' },
+      { text: 'Graduate Programs', href: '/programs', variant: 'secondary' },
+      { text: 'Visiting Scholars', href: '/contact', variant: 'tertiary' },
+    ]}
+  />
+</Layout>

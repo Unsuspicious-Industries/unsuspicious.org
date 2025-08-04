@@ -9,43 +9,43 @@ import { getPermalink } from '~/utils/permalinks';
 import { Image } from 'astro:assets';
 
 const metadata = {
-title: 'Unsuspicious Industries Product Page',
+title: 'Applied Research Services',
 };
 ---
 <Layout metadata={metadata}>
 <Hero
-  tagline="Unsuspicious Products"
-  title="Innovative systems from the unsuspicious team."
-  subtitle="Sometimes, research leads to products !"
+  tagline="Applied Research Services"
+  title="Collaborative Research Programs & Technology Transfer"
+  subtitle="Our institute offers specialized research collaboration opportunities and technology transfer services for academic institutions and industry partners."
   image={{
     src: CodeHero,
-    alt: 'A spotlight on a product from Unsuspicious Industries.',
+    alt: 'Research collaboration at Unsuspicious Industries.',
   }}
   imageClass='blur-sm'
 />
 
 <Hero2
-  tagline="Custom AI Models"
-  title="Unleash the Potential of AI with Tailored Solutions"
-  subtitle="Our AI Lab offers custom AI model training services tailored to your specific needs. Whether you require computer vision, natural language processing, or any other AI application, our team of experts will work closely with you to develop and deploy high-performance AI models."
+  tagline="Custom Research Solutions"
+  title="Tailored Research Programs for Academic & Industry Partners"
+  subtitle="Our research institute provides collaborative research programs and specialized expertise to academic and industry partners. Whether you require computational modeling, machine learning research, or interdisciplinary analysis, our faculty will work with you to develop rigorous research methodologies and deliver scholarly outcomes."
   actions={[
-    { variant: 'primary', text: 'Contact Us', href: '/contact' },
-    { text: 'Learn More', href: '#' },
+    { variant: 'primary', text: 'Research Collaboration', href: '/contact' },
+    { text: 'View Our Expertise', href: '/faculty' },
   ]}
   image={{
     src: '~/assets/images/people2.png',
-    alt: 'Custom AI Models',
+    alt: 'ML Collaboration',
   }}
 
 />
 
 <Hero2
-  tagline="Financial Analysis API"
-  title="Unlock the Power of Real-Time Stock Price Predictions"
-  subtitle="Our cutting-edge Financial Analysis API provides real-time analysis of stock price predictions. Leverage the power of our advanced algorithms to make informed investment decisions and stay ahead of the market."
+  tagline="Financial Mathematics Research"
+  title="Quantitative Analysis & Mathematical Finance Research Platform"
+  subtitle="Our Mathematical Finance Division provides rigorous quantitative analysis and research capabilities for academic institutions and financial organizations seeking evidence-based insights."
   actions={[
-    { variant: 'primary', text: 'Learn More', href: getPermalink("/financial/info") },
-    { text: 'Demo', href: 'https://platform.unsuspicious.org' },
+    { variant: 'primary', text: 'Research Collaboration', href: getPermalink("/financial/info") },
+    { text: 'Academic Partnership', href: '/contact' },
   ]}
   image={{
     src: 'https://images.unsplash.com/photo-1691643158804-d3f02eb456a3?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
