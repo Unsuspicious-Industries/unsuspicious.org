@@ -7,7 +7,8 @@ import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 import Stats from '~/components/widgets/Stats.astro';
 import type { MetaData } from '~/types';
-import DfsLogo from '~/assets/images/dfs-logo.png';
+import DfsLogo from '/public/graphics/dfs.png';
+import { getBlogPermalink } from '~/utils/permalinks';
 
 const metadata: MetaData = {
   title: 'DFS Lab',
@@ -15,7 +16,29 @@ const metadata: MetaData = {
 };
 ---
 
+<style is:global>
+  /* Override brand colors for DFS Lab page to use Formal Purple */
+  .dfs-page {
+    --aw-color-accent: #54005b; /* Formal Purple */
+    --aw-color-text-heading: #54005b; /* Formal Purple */
+    --aw-color-primary: #54005b; /* Formal Purple */
+    --aw-color-secondary: #54005b; /* Formal Purple */
+  }
+  
+  .dfs-page .text-accent {
+    color: #54005b !important; /* Formal Purple */
+  }
+  
+  
+  .dfs-page .btn-primary,
+  .dfs-page .btn-primary:hover {
+    background-color: #54005b;
+    border-color: #54005b;
+  }
+</style>
+
 <Layout metadata={metadata} logoSrc={DfsLogo.src} logoName="Dynamic Formal Systems Research Laboratory" logoAcronym="DFS">
+  <div class="dfs-page">
   <!-- Hero Widget ******************* -->
   <Hero
     tagline="Dynamic Formal Systems Research Laboratory"
@@ -131,7 +154,7 @@ const metadata: MetaData = {
     title="Next-Generation Mathematical AI"
     subtitle="Our flagship research combines polymorphic type systems with dynamic constraint generation to create AI systems capable of sophisticated mathematical reasoning. We're building AI that doesn't just process information, but truly understands mathematical structure and logical relationships."
     actions={[
-      { variant: 'primary', text: 'Research Publications', href: '/publications' },
+      { variant: 'primary', text: 'Research Log', href: getBlogPermalink() },
       { text: 'Collaborate With Us', href: '/contact' },
     ]}
     image={{
@@ -140,4 +163,5 @@ const metadata: MetaData = {
     }}
   />
 
+  </div>
 </Layout>
